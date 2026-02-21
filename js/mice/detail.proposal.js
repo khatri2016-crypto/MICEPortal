@@ -156,7 +156,7 @@ $("#replyBtn").on("click", () => {
         </div>
       </div>
       <div class="flex-grow-1">
-        <p class="mb-1 fw-medium">You (Sachin)</p>
+        <p class="mb-1 fw-medium">You (CodePal)</p>
         <small
           >${message}</small
         >

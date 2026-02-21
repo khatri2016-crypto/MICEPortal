@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       gridApi.setGridOption("rowData", data);
+      $("#shortlistBadge").text(data.filter(x => x.isShortListed).length)
     });
 });
 
