@@ -115,3 +115,9 @@ main {
   background-color: rgba(13, 110, 253, 0.08); /* light blue tint */
   border-left: 4px solid #0d6efd;
 }
+
+@media (max-width: 991.98px) {
+  .app-navbar {
+    height: auto;           /* allow navbar to grow when menu opens */
+  }
+}

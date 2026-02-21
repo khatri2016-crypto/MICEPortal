@@ -118,9 +118,11 @@ button[disabled] {
   color: #666 !important;
   border-color: #aaa !important;
 }
-
-
-
+@media (max-width: 991.98px) {
+  .app-navbar {
+    height: auto;           /* allow navbar to grow when menu opens */
+  }
+}
 
 /* AG GRID OVERRIDE CSS */
 .ag-cell-value{
