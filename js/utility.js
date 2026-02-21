@@ -308,16 +308,3 @@ function daysBetween(dateStr1, dateStr2, format = "YYYY-MM-DD") {
   const diffTime = Math.abs(date2 - date1);
   return Math.floor(diffTime / (1000 * 60 * 60 * 24));
 }
-
-document.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const delay = 500; // milliseconds
-    showLoading();
-    setTimeout(() => {
-      window.location.href = this.href;
-      hideLoading();
-    }, delay);
-  });
-});
