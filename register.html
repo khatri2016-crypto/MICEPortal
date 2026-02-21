@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register - MICE Portal</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./css/override.css" />
+  </head>
+  <body>
+    <div
+      class="container auth-wrapper d-flex align-items-center justify-content-center"
+    >
+      <div class="auth-card">
+        <h1 class="auth-title text-center">Create account</h1>
+        <p class="auth-subtitle text-center mb-4">Sign up to get started</p>
+
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label class="form-label">Full name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="John Doe"
+            id="fullName"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="you@company.com"
+            id="email"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Create password"
+              id="password"
+            />
+            <button
+              class="btn btn-password-toggle border border-1"
+              type="button"
+              id="btnPasswordToggle"
+            >
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <div class="form-text">Minimum 8 characters</div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-4">
+          <label class="form-label">Confirm password</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Confirm password"
+              id="confirmPassword"
+            />
+            <button
+              class="btn btn-password-toggle border border-1"
+              type="button"
+              id="btnConfirmPasswordToggle"
+            >
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Submit -->
+        <button class="btn btn-primary w-100 mb-3" id="btnRegisterUser">
+          Create account
+        </button>
+        <!-- Divider -->
+        <div class="divider">OR</div>
+
+        <!-- Social login -->
+        <button
+          class="btn btn-outline-auth w-100 d-flex align-items-center justify-content-center gap-2"
+          id="btnGoogleSignUp"
+        >
+          <i class="fa-brands fa-google"></i>
+          Continue with Google
+        </button>
+        <div class="register-footer">
+          Already have an account?
+          <a href="login.html" style="color: #2563eb">Sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="informativeModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast-container position-absolute top-0 end-0 p-3"></div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="./js/register.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/utility.js"></script>
+  </body>
+</html>

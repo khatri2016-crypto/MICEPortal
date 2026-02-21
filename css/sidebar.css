@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden; /* ⛔ prevent body scroll */
+}
+
+/* Sidebar container */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  flex-shrink: 0;
+}
+
+/* Header */
+.sidebar-header {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+
+.sidebar-brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.sidebar-brand img {
+  height: 65px;
+  width: 100%;
+}
+
+/* Nav links */
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  padding: 10px 12px;
+  border-radius: 8px;
+cursor: pointer;
+}
+
+/* Icons */
+.sidebar i {
+  font-size: 16px;
+}
+
+/* Hover */
+.sidebar .nav-link:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+}
+
+/* Active */
+.sidebar .nav-link.active {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+/* Footer */
+.sidebar-footer {
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+main {
+  height: 100vh;
+}
+.gallery-wrapper {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: auto; /* ✅ scroll here only */
+  overflow-x: hidden;
+}

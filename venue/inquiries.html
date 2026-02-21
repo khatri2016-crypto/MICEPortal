@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inquiries - Venue</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+
+    <!-- Includes all JS & CSS for the JavaScript Data Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <link rel="stylesheet" href="../css/sidebar.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-lg-flex flex-column">
+          <div class="sidebar-header">
+            <span class="sidebar-brand">
+              <img src="../assets/image-removebg-preview.png" alt="Logo" />
+            </span>
+          </div>
+
+          <ul class="nav nav-pills flex-column gap-1 sidebar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="event-spaces.html">
+                <i class="fa-solid fa-kaaba"></i>
+                Event Spaces
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="inquiries.html">
+                <i class="fa-brands fa-rocketchat"></i>
+                Received RFPs
+                <span class="badge text-bg-danger">2</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">
+                <i class="fa-regular fa-images"></i>
+                Gallery
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="documents.html">
+                <i class="fa-regular fa-folder"></i>
+                Documents
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-footer d-flex flex-column gap-1 mt-auto">
+            <span class="nav-item">
+              <a class="nav-link" href="profile.html">
+                <i class="fa-regular fa-circle-user"></i>
+                Profile
+              </a>
+            </span>
+            <span class="nav-item">
+              <a class="nav-link cursor-pointer" id="btnSettings">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+            </span>
+            <span class="nav-item" id="logoutBtn">
+              <a class="nav-link text-danger cursor-pointer">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+              </a>
+            </span>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-grow-1 p-4 d-flex flex-column">
+          <!-- Page content here -->
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="align-self-center">
+                        <i class="fa-solid fa-check-double fs-2"></i>
+                      </div>
+                      <div class="media-body text-right">
+                        <h3>278</h3>
+                        <span>New RFPs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="align-self-center">
+                        <i class="fa-regular fa-hourglass-half fs-2"></i>
+                      </div>
+                      <div class="media-body text-right">
+                        <h3>156</h3>
+                        <span>In Review RFPs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="align-self-center">
+                        <i class="fa-solid fa-users fs-2"></i>
+                      </div>
+                      <div class="text-right">
+                        <h3>89</h3>
+                        <span>Total Clients</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 mb-4">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="align-self-center">
+                        <i class="fa-solid fa-align-justify fs-2"></i>
+                      </div>
+                      <div class="media-body text-right">
+                        <h3>423</h3>
+                        <span>Total RFPs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row flex-grow-1">
+            <div id="inquiriesGrid" style="height: 100%"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="informativeModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <script src="../js/ag.grid.helper.js"></script>
+    <script src="./grid/inquiries.grid.js"></script>
+
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

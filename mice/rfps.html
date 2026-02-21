@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RFPs - MICE Agent</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/mice/style.css" />
+
+    <!-- Includes all JS & CSS for the JavaScript Data Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="rfps.html">RFPs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proposals.html">Proposals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clients.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Notifications -->
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  4
+                </span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 4 unread items</small>
+                </div>
+
+                <div class="list-group list-group-flush">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary text-white rounded-circle p-2">
+                          <i class="fa-solid fa-file-lines fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          New proposal arrived for TechCorp Annual Summit 2026
+                        </p>
+                        <small class="text-muted"
+                          >Hyatt Regency • 1 hour ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-danger text-white rounded-circle p-2">
+                          <i class="fa-solid fa-hourglass-end fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          RFP deadline tomorrow: Employee Appreciation Day
+                        </p>
+                        <small class="text-muted"
+                          >System alert • 3 hours ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- More items possible -->
+                </div>
+
+                <div class="p-3 border-top bg-light text-center">
+                  <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">Sachin</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../login.html"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-4 py-4">
+      <!-- KPI / Quick Stats -->
+      <div class="row g-4 mb-3">
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Total Active RFPs</p>
+              <h2 class="mb-0">18</h2>
+              <small class="text-success"
+                ><i class="fas fa-arrow-up me-1"></i>3 new this week</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">RFPs Closing Soon</p>
+              <h2 class="mb-0">5</h2>
+              <small class="text-danger"
+                ><i class="fas fa-exclamation-triangle me-1"></i>2
+                tomorrow</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Proposals Received</p>
+              <h2 class="mb-0">47</h2>
+              <small class="text-warning"
+                ><i class="fas fa-clock me-1"></i>12 pending review</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Avg. Hotels per RFP</p>
+              <h2 class="mb-0">11</h2>
+              <small class="text-muted">This month</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div
+        class="d-flex flex-wrap gap-3 mb-3 align-items-center justify-content-end"
+      >
+        <a href="create-rfp.html" class="btn btn-primary shadow-sm">
+          <i class="fas fa-plus me-2"></i>Create New RFP
+        </a>
+      </div>
+
+      <div class="row flex-grow-1">
+        <div id="rfpsGrid" style="height: 100%"></div>
+      </div>
+      
+    </main>
+
+    <div class="modal" tabindex="-1" id="confirmationModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+    id="loadingScreen"
+    class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+    style="display: none; z-index: 9999"
+  >
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="spinner-border text-success"></div>
+    </div>
+  </div>
+
+  <div
+    class="toast align-items-center text-bg-primary border-0"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+    style="position: absolute; top: 10px; right: 10px"
+  >
+    <div class="d-flex">
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+      <button
+        type="button"
+        class="btn-close btn-close-white me-2 m-auto"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+
+    <script src="../js/ag.grid.helper.js"></script>
+    <script src="./grid/rfps.grid.js"></script>
+
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+[
+  {
+    "id": "ag_001",
+    "name": "Vikram Singh – Nepal DMC",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Conferences", "Team Building"],
+    "description": "Experienced in corporate offsites and cultural events across Nepal.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_002",
+    "name": "Himalayan Events & DMC",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["MICE", "Weddings", "Adventure Incentives"],
+    "description": "Full-service DMC specializing in high-end corporate incentives and mountain retreats.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_003",
+    "name": "ProMeet Nepal",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Conferences", "Product Launches", "Gala Dinners"],
+    "description": "Professional conference organizer with strong AV and venue relationships in Kathmandu Valley.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_004",
+    "name": "Nepal Elite DMC",
+    "location": "Pokhara, Nepal",
+    "specialties": ["Team Building", "Incentive Travel", "Adventure Events"],
+    "description": "Pokhara-based specialist for lakeside team offsites and adventure-themed corporate events.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_005",
+    "name": "Kathmandu Meetings Company",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Conferences", "Seminars", "Hybrid Events"],
+    "description": "Focus on seamless hybrid and in-person meetings with excellent technical production support.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_006",
+    "name": "Green Himalaya Events",
+    "location": "Lalitpur, Nepal",
+    "specialties": ["Sustainable Events", "CSR Programs", "Team Building"],
+    "description": "Eco-conscious agency delivering carbon-neutral corporate retreats and CSR activations.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_007",
+    "name": "Everest DMC Nepal",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Luxury Incentives", "Cultural Immersion", "Gala Events"],
+    "description": "Premium DMC for VIP corporate groups seeking authentic Nepali experiences.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_008",
+    "name": "Pokhara Event Solutions",
+    "location": "Pokhara, Nepal",
+    "specialties": ["Team Offsites", "Adventure Activities", "Outdoor Events"],
+    "description": "Specialized in lakeside and mountain team-building programs in Pokhara region.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_009",
+    "name": "Nepal Conferences & Events",
+    "location": "Kathmandu, Nepal",
+    "specialties": [
+      "International Conferences",
+      "Exhibitions",
+      "Association Events"
+    ],
+    "description": "Large-scale conference management with experience hosting international associations.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_010",
+    "name": "Mountain Magic DMC",
+    "location": "Thamel, Kathmandu",
+    "specialties": ["Incentive Travel", "Cultural Tours", "Team Building"],
+    "description": "Creative incentive programs combining adventure, culture and luxury stays.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_011",
+    "name": "Asia Summit Nepal",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Summits", "Leadership Events", "Networking Forums"],
+    "description": "Expert in high-level executive summits and C-suite networking events in Nepal.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_012",
+    "name": "Chitwan Jungle Events",
+    "location": "Chitwan, Nepal",
+    "specialties": ["Wildlife Incentives", "Team Building", "Nature Retreats"],
+    "description": "Unique jungle and wildlife-based corporate offsites and incentive programs.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_013",
+    "name": "Nepal Creative Events",
+    "location": "Lalitpur, Nepal",
+    "specialties": ["Product Launches", "Brand Activations", "Gala Dinners"],
+    "description": "Creative agency focused on memorable brand experiences and product unveilings.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_014",
+    "name": "Himalayan DMC & Adventures",
+    "location": "Pokhara, Nepal",
+    "specialties": [
+      "Adventure Incentives",
+      "Team Challenges",
+      "Outdoor Events"
+    ],
+    "description": "Adventure-focused DMC offering trekking, rafting and team challenge programs.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_015",
+    "name": "Kathmandu Convention Bureau Partner",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Conferences", "Trade Shows", "Association Meetings"],
+    "description": "Strong ties with major Kathmandu venues for large-scale professional events.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_016",
+    "name": "Nepal Wellness Retreats",
+    "location": "Nagarkot, Nepal",
+    "specialties": [
+      "Wellness Programs",
+      "Leadership Retreats",
+      "Yoga & Mindfulness"
+    ],
+    "description": "Specialized in corporate wellness, yoga retreats and stress-management programs.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_017",
+    "name": "Lumbini Events & DMC",
+    "location": "Lumbini, Nepal",
+    "specialties": [
+      "Spiritual Retreats",
+      "Cultural Events",
+      "Incentive Groups"
+    ],
+    "description": "Unique spiritual and heritage-based corporate incentive experiences in Lumbini.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_018",
+    "name": "Nepal Luxury DMC",
+    "location": "Kathmandu, Nepal",
+    "specialties": ["Luxury Incentives", "VIP Events", "Exclusive Experiences"],
+    "description": "High-end DMC catering to premium corporate groups and executive travel.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_019",
+    "name": "Festival Nepal Events",
+    "location": "Bhaktapur, Nepal",
+    "specialties": [
+      "Cultural Festivals",
+      "Corporate Celebrations",
+      "Themed Events"
+    ],
+    "description": "Experts in integrating Nepali festivals and traditions into corporate celebrations.",
+    "isFavorite": false
+  },
+  {
+    "id": "ag_020",
+    "name": "Nepal Hybrid Events Co",
+    "location": "Kathmandu, Nepal",
+    "specialties": [
+      "Hybrid Conferences",
+      "Virtual + In-person",
+      "Live Streaming"
+    ],
+    "description": "Specialized in seamless hybrid event production with strong technical capabilities.",
+    "isFavorite": false
+  }
+]

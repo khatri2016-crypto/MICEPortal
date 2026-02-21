@@ -1,0 +1,162 @@
+[
+    {
+      "id": "bk_001",
+      "eventName": "Annual Sales Kickoff",
+      "hotelName": "Hyatt Regency Kathmandu",
+      "startDate": "2026-03-15",
+      "endDate": "2026-03-17",
+      "agency": "Kathmandu Meetings Co"
+    },
+    {
+      "id": "bk_002",
+      "eventName": "Leadership Retreat 2026",
+      "hotelName": "Soaltee Kathmandu",
+      "startDate": "2026-04-20",
+      "endDate": "2026-04-22",
+      "agency": "Nepal Elite DMC"
+    },
+    {
+      "id": "bk_003",
+      "eventName": "Team Offsite Pokhara",
+      "hotelName": "Pokhara Grande",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-05",
+      "agency": "ProMeet Nepal"
+    },
+    {
+      "id": "bk_004",
+      "eventName": "Product Launch & Dinner",
+      "hotelName": "Hotel Yak & Yeti",
+      "startDate": "2026-05-12",
+      "endDate": "2026-05-12",
+      "agency": "Event Nepal Solutions"
+    },
+    {
+      "id": "bk_005",
+      "eventName": "Q3 Strategy Workshop",
+      "hotelName": "Crowne Plaza Kathmandu",
+      "startDate": "2026-07-08",
+      "endDate": "2026-07-09",
+      "agency": "Asia Pacific Events"
+    },
+    {
+      "id": "bk_006",
+      "eventName": "Annual Partner Summit",
+      "hotelName": "The Dwarika's Hotel",
+      "startDate": "2026-09-18",
+      "endDate": "2026-09-20",
+      "agency": "Himalayan DMC"
+    },
+    {
+      "id": "bk_007",
+      "eventName": "Team Building Adventure",
+      "hotelName": "Tiger Palace Resort",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-12",
+      "agency": "Nepal Adventure Events"
+    },
+    {
+      "id": "bk_008",
+      "eventName": "Customer Appreciation Night",
+      "hotelName": "Hotel Annapurna",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "agency": "ProMeet Nepal"
+    },
+    {
+      "id": "bk_009",
+      "eventName": "Innovation & Tech Conference",
+      "hotelName": "Aloft Kathmandu",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-26",
+      "agency": "Kathmandu Meetings Co"
+    },
+    {
+      "id": "bk_010",
+      "eventName": "Board of Directors Meeting",
+      "hotelName": "Radisson Hotel Kathmandu",
+      "startDate": "2026-02-14",
+      "endDate": "2026-02-14",
+      "agency": "Elite Nepal Events"
+    },
+    {
+      "id": "bk_011",
+      "eventName": "Family Day Celebration",
+      "hotelName": "Club Himalaya Nagarkot",
+      "startDate": "2026-04-10",
+      "endDate": "2026-04-10",
+      "agency": "Nepal Elite DMC"
+    },
+    {
+      "id": "bk_012",
+      "eventName": "Marketing & Branding Workshop",
+      "hotelName": "Pokhara Lakeside Resort",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-17",
+      "agency": "Green Meetings Nepal"
+    },
+    {
+      "id": "bk_013",
+      "eventName": "Year-End Gala Dinner",
+      "hotelName": "Hyatt Place Kathmandu",
+      "startDate": "2026-12-20",
+      "endDate": "2026-12-20",
+      "agency": "Himalayan DMC"
+    },
+    {
+      "id": "bk_014",
+      "eventName": "Sales & Marketing Summit",
+      "hotelName": "Shangri-La Kathmandu",
+      "startDate": "2026-03-28",
+      "endDate": "2026-03-29",
+      "agency": "ProMeet Nepal"
+    },
+    {
+      "id": "bk_015",
+      "eventName": "HR Leadership Conference",
+      "hotelName": "Hotel Barahi Pokhara",
+      "startDate": "2026-05-05",
+      "endDate": "2026-05-06",
+      "agency": "Asia Summit Organizers"
+    },
+    {
+      "id": "bk_016",
+      "eventName": "Incentive Trip – Chitwan",
+      "hotelName": "Meghauli Serai",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-24",
+      "agency": "Nepal Adventure Events"
+    },
+    {
+      "id": "bk_017",
+      "eventName": "New Product Training",
+      "hotelName": "The Everest Hotel",
+      "startDate": "2026-07-20",
+      "endDate": "2026-07-21",
+      "agency": "Kathmandu Meetings Co"
+    },
+    {
+      "id": "bk_018",
+      "eventName": "CSR Volunteer Day",
+      "hotelName": "Godavari Village Resort",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-04",
+      "agency": "Green Meetings Nepal"
+    },
+    {
+      "id": "bk_019",
+      "eventName": "Executive Offsite – Bandipur",
+      "hotelName": "The Old Inn Bandipur",
+      "startDate": "2026-11-18",
+      "endDate": "2026-11-19",
+      "agency": "Elite Nepal Events"
+    },
+    {
+      "id": "bk_020",
+      "eventName": "Client Appreciation Breakfast",
+      "hotelName": "Hotel de l'Annapurna",
+      "startDate": "2026-01-30",
+      "endDate": "2026-01-30",
+      "agency": "ProMeet Nepal"
+    }
+  ]

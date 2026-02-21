@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notifications - Corporate Event Planner</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/corporate/style.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Navbar (same as other pages, just change active link) -->
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agencies.html">Agencies</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative active"
+                type="button"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  2
+                </span>
+              </button>
+
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 2 unread messages</small>
+                </div>
+
+                <!-- Notification list (using list-group for clean separation) -->
+                <div class="list-group list-group-flush">
+                  <!-- Example item 1 -->
+                  <a
+                    href="events.html?id=evt_1005"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary text-white rounded-circle p-2">
+                          <i class="fa-solid fa-calendar-check fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          New proposals received for "Employee Appreciation Day"
+                        </p>
+                        <small class="text-muted"
+                          >Global Events DMC • 2 hours ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- Example item 2 -->
+                  <a
+                    href="events.html?id=evt_1010"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-success text-white rounded-circle p-2">
+                          <i class="fa-solid fa-check-circle fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          Booking confirmed for "Nepal Tourism Board Annual Gala"
+                        </p>
+                        <small class="text-muted"
+                          >Elite Events • 3 days ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- More items can be added dynamically -->
+                  <!-- If no notifications: -->
+                  <!-- <div class="text-center py-5 text-muted">No new notifications</div> -->
+                </div>
+
+                <!-- Footer with View All link -->
+                <div class="p-3 border-top bg-light text-center">
+                  <a
+                    href="notifications.html"
+                    class="btn btn-outline-primary btn-sm w-100"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">CodePal</span>
+              </div>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="profile.html">Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item cursor-pointer" id="btnSettings">
+                    Settings
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li id="logoutBtn">
+                  <a class="dropdown-item text-danger cursor-pointer">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container-fluid px-4 py-5 flex-grow-1">
+        <div class="row justify-content-center">
+          <div class="col-xl-10 col-lg-11">
+    
+            <!-- Page Header -->
+            <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
+              <div>
+                <h1 class="h3 fw-semibold mb-1">Notifications</h1>
+                <p class="text-muted mb-0">All your platform updates, messages, and event alerts in one place</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary">
+                  <i class="fa-solid fa-check-double me-2"></i> Mark all as read
+                </button>
+                <button class="btn btn-outline-danger">
+                  <i class="fa-solid fa-trash-can me-2"></i> Clear all
+                </button>
+              </div>
+            </div>
+    
+            <!-- Filters / Tabs -->
+            <ul class="nav nav-tabs mb-4" id="notificationTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">
+                  All <span class="badge bg-secondary ms-1">42</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="unread-tab" data-bs-toggle="tab" data-bs-target="#unread" type="button" role="tab">
+                  Unread <span class="badge bg-danger ms-1">2</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab">
+                  Events
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab">
+                  Messages
+                </button>
+              </li>
+            </ul>
+    
+            <!-- Tab Content -->
+            <div class="tab-content" id="notificationTabContent">
+    
+              <!-- All Notifications -->
+              <div class="tab-pane fade show active" id="all" role="tabpanel">
+                <div class="list-group">
+                  <!-- Unread example -->
+                  <a href="events.html?id=evt_1003" class="list-group-item list-group-item-action px-4 py-3 border-bottom unread">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-warning text-white rounded-circle p-3">
+                          <i class="fa-solid fa-file-alt fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start">
+                          <h6 class="mb-1 fw-semibold">4 new proposals received</h6>
+                          <small class="text-muted">2 hours ago</small>
+                        </div>
+                        <p class="mb-1">For "Product Launch Event Bangkok" from Bangkok Event Solutions, Nepal Elite DMC, and 2 others.</p>
+                        <small class="text-primary">Click to review proposals</small>
+                      </div>
+                    </div>
+                  </a>
+    
+                  <!-- Read example -->
+                  <a href="events.html?id=evt_1007" class="list-group-item list-group-item-action px-4 py-3 border-bottom">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-success text-white rounded-circle p-3">
+                          <i class="fa-solid fa-check-circle fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start">
+                          <h6 class="mb-1 fw-semibold">Booking confirmed</h6>
+                          <small class="text-muted">3 weeks ago</small>
+                        </div>
+                        <p class="mb-1">Leadership Retreat Q2 confirmed at Himalayan Resort Pokhara via Elite Events.</p>
+                        <small class="text-muted">Contract uploaded • View details</small>
+                      </div>
+                    </div>
+                  </a>
+    
+                  <!-- Message notification -->
+                  <a href="#" class="list-group-item list-group-item-action px-4 py-3 border-bottom">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-info text-white rounded-circle p-3">
+                          <i class="fa-solid fa-envelope fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start">
+                          <h6 class="mb-1 fw-semibold">New message from Nepal DMC</h6>
+                          <small class="text-muted">Yesterday at 10:42 AM</small>
+                        </div>
+                        <p class="mb-1">"Could you please clarify the required AV setup for the main hall? We have two options..."</p>
+                        <small class="text-primary">Reply in chat</small>
+                      </div>
+                    </div>
+                  </a>
+    
+                  <!-- More items... -->
+                  <!-- ... repeat pattern for older notifications ... -->
+    
+                  <!-- Load more -->
+                  <div class="text-center py-4">
+                    <button class="btn btn-outline-primary">
+                      <i class="fa-solid fa-arrow-down me-2"></i> Load more
+                    </button>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Unread tab (similar structure, only unread items) -->
+              <div class="tab-pane fade" id="unread" role="tabpanel">
+                <div class="alert alert-info text-center py-5">
+                  <i class="fa-solid fa-bell-slash fa-3x mb-3"></i>
+                  <h5>No unread notifications</h5>
+                  <p class="text-muted">You're all caught up!</p>
+                </div>
+                <!-- Or show only unread items here -->
+              </div>
+    
+              <!-- Events tab -->
+              <div class="tab-pane fade" id="events" role="tabpanel">
+                <!-- Filter only event-related notifications (proposals, bookings, deadlines, etc.) -->
+                <p class="text-center text-muted py-5">Event-related notifications will appear here</p>
+              </div>
+    
+              <!-- Messages tab -->
+              <div class="tab-pane fade" id="messages" role="tabpanel">
+                <!-- Show only in-platform message notifications -->
+                <p class="text-center text-muted py-5">Direct messages and replies will appear here</p>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </main>
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- <script src="../js/corporate/notifications.js"></script> -->
+    <script src="../js/utility.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

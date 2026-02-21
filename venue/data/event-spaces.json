@@ -1,0 +1,156 @@
+[
+  {
+    "venueId": 1,
+    "spaceName": "Grand Ballroom",
+    "capacity": 450,
+    "description": "Includes built-in stage, dance floor, and high ceilings. Perfect for weddings & large conferences"
+  },
+  {
+    "venueId": 1,
+    "spaceName": "Crystal Hall",
+    "capacity": 280,
+    "description": "Elegant chandelier lighting, divisible into 3 sections. Great for banquets and product launches"
+  },
+  {
+    "venueId": 1,
+    "spaceName": "Ivory Lounge",
+    "capacity": 90,
+    "description": "Cozy VIP pre-function area with bar setup and comfortable seating"
+  },
+  {
+    "venueId": 1,
+    "spaceName": "Amber Room",
+    "capacity": 60,
+    "description": "Warm wooden finishes, ideal for breakout sessions and smaller dinners"
+  },
+  {
+    "venueId": 1,
+    "spaceName": "Pearl Terrace",
+    "capacity": 150,
+    "description": "Semi-outdoor covered terrace attached to the ballroom – cocktail & photo area"
+  },
+
+  {
+    "venueId": 2,
+    "spaceName": "Emerald Room",
+    "capacity": 120,
+    "description": "Natural daylight, classroom or theater setup. Good for seminars and workshops"
+  },
+  {
+    "venueId": 2,
+    "spaceName": "Sapphire Suite",
+    "capacity": 45,
+    "description": "U-shape boardroom layout with 75\" screen and built-in video conferencing"
+  },
+  {
+    "venueId": 2,
+    "spaceName": "Jade Studio",
+    "capacity": 25,
+    "description": "Creative flexible space with writable walls and movable furniture"
+  },
+  {
+    "venueId": 2,
+    "spaceName": "Opal Meeting Room",
+    "capacity": 12,
+    "description": "Small executive meeting room with privacy glass and high-end AV"
+  },
+  {
+    "venueId": 2,
+    "spaceName": "Turquoise Lounge",
+    "capacity": 35,
+    "description": "Relaxed lounge-style space for informal discussions and coffee breaks"
+  },
+
+  {
+    "venueId": 3,
+    "spaceName": "Rooftop Terrace",
+    "capacity": 200,
+    "description": "Open-air space with panoramic city view. Best for cocktail receptions and evening events (weather dependent)"
+  },
+  {
+    "venueId": 3,
+    "spaceName": "Sky Deck Lounge",
+    "capacity": 80,
+    "description": "Covered lounge area with fire pits and ambient lighting"
+  },
+  {
+    "venueId": 3,
+    "spaceName": "Sunset Platform",
+    "capacity": 120,
+    "description": "Open standing area ideal for welcome drinks and networking"
+  },
+  {
+    "venueId": 3,
+    "spaceName": "Moonlight Corner",
+    "capacity": 40,
+    "description": "Intimate semi-private zone with cozy seating and string lights"
+  },
+  {
+    "venueId": 3,
+    "spaceName": "Starlight Bar",
+    "capacity": 60,
+    "description": "Dedicated bar counter and high-top tables on the rooftop"
+  },
+
+  {
+    "venueId": 4,
+    "spaceName": "Boardroom A",
+    "capacity": 18,
+    "description": "Executive board table, 85-inch screen, soundproofed. Ideal for board meetings and interviews"
+  },
+  {
+    "venueId": 4,
+    "spaceName": "Boardroom B",
+    "capacity": 14,
+    "description": "Modern minimalist design with 75\" display and wireless presentation system"
+  },
+  {
+    "venueId": 4,
+    "spaceName": "Executive Suite 1",
+    "capacity": 10,
+    "description": "Private office-style room with natural light and ergonomic chairs"
+  },
+  {
+    "venueId": 4,
+    "spaceName": "Strategy Room",
+    "capacity": 8,
+    "description": "Round table setup optimized for brainstorming and small team meetings"
+  },
+  {
+    "venueId": 4,
+    "spaceName": "Focus Pod",
+    "capacity": 4,
+    "description": "Very small enclosed booth – perfect for 1:1 calls or interviews"
+  },
+
+  {
+    "venueId": 5,
+    "spaceName": "Garden Pavilion",
+    "capacity": 80,
+    "description": "Outdoor covered area surrounded by lawn. Popular for intimate ceremonies and garden parties"
+  },
+  {
+    "venueId": 5,
+    "spaceName": "Rose Garden Lawn",
+    "capacity": 150,
+    "description": "Open lawn area – ideal for standing receptions, yoga, or outdoor dining"
+  },
+  {
+    "venueId": 5,
+    "spaceName": "Lotus Gazebo",
+    "capacity": 30,
+    "description": "Small romantic gazebo surrounded by water feature – great for ceremonies"
+  },
+  {
+    "venueId": 5,
+    "spaceName": "Orchard Deck",
+    "capacity": 55,
+    "description": "Wooden deck under fruit trees with fairy lights – evening events"
+  },
+  {
+    "venueId": 5,
+    "spaceName": "Heritage Courtyard",
+    "capacity": 100,
+    "description": "Traditional stone courtyard with fountain – perfect for cultural events"
+  }
+]

@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Corporate Event Planner</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/corporate/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="dashboard.html">
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agencies.html">Agencies</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                type="button"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  2
+                </span>
+              </button>
+
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 2 unread messages</small>
+                </div>
+
+                <!-- Notification list (using list-group for clean separation) -->
+                <div class="list-group list-group-flush">
+                  <!-- Example item 1 -->
+                  <a
+                  href="events.html?id=evt_1005"
+                  class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                >
+                  <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-primary text-white rounded-circle p-2">
+                        <i class="fa-solid fa-calendar-check fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">
+                        New proposals received for "Employee Appreciation Day"
+                      </p>
+                      <small class="text-muted"
+                        >Global Events DMC • 2 hours ago</small
+                      >
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Example item 2 -->
+                <a
+                  href="events.html?id=evt_1010"
+                  class="list-group-item list-group-item-action px-4 py-3 border-bottom"
+                >
+                  <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-success text-white rounded-circle p-2">
+                        <i class="fa-solid fa-check-circle fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">
+                        Booking confirmed for "Nepal Tourism Board Annual Gala"
+                      </p>
+                      <small class="text-muted"
+                        >Elite Events • 3 days ago</small
+                      >
+                    </div>
+                  </div>
+                </a>
+
+                  <!-- More items can be added dynamically -->
+                  <!-- If no notifications: -->
+                  <!-- <div class="text-center py-5 text-muted">No new notifications</div> -->
+                </div>
+
+                <!-- Footer with View All link -->
+                <div class="p-3 border-top bg-light text-center">
+                  <a
+                    href="notifications.html"
+                    class="btn btn-outline-primary btn-sm w-100"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">CodePal</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li>
+                  <a class="dropdown-item cursor-pointer" id="btnSettings">
+                    Settings
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li id="logoutBtn">
+                  <a class="dropdown-item text-danger cursor-pointer">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-4 py-4">
+      <!-- Welcome + Quick Stats Row -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h1 class="h3 fw-semibold mb-1">Welcome back, CodePal</h1>
+          <p class="text-muted">
+            Here's what's happening with your corporate events
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Stats Cards (4-column on lg, 2 on md, stack on sm) -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1">Total Events</p>
+                  <h4 class="fw-bold mb-0">12</h4>
+                </div>
+                <i
+                  class="fa-solid fa-calendar-days fa-2x text-primary opacity-50"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1">Active Events</p>
+                  <h4 class="fw-bold mb-0">4</h4>
+                </div>
+                <i
+                  class="fa-solid fa-spinner fa-2x text-warning opacity-50"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1">Pending Approvals</p>
+                  <h4 class="fw-bold mb-0 text-danger">3</h4>
+                </div>
+                <i
+                  class="fa-solid fa-hourglass-half fa-2x text-danger opacity-50"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1">Confirmed This Year</p>
+                  <h4 class="fw-bold mb-0 text-success">7</h4>
+                </div>
+                <i
+                  class="fa-solid fa-check-circle fa-2x text-success opacity-50"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Create New Event CTA + Pending Actions -->
+      <div class="row g-4 mb-5">
+        <!-- Left: Create New + Quick Actions -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-4">Get Started</h5>
+              <a href="events.html?create" class="btn btn-primary btn-lg mb-3">
+                <i class="fa-solid fa-plus me-2"></i> Create New Event
+              </a>
+              <p class="text-muted small mb-3">Or continue with:</p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="agencies.html" class="text-decoration-none"
+                    ><i class="fa-solid fa-building me-2 text-primary"></i
+                    >Browse Agencies</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Pending Actions / Notifications Feed -->
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-light">
+              <h5 class="mb-0">
+                Pending Actions
+                <span class="badge bg-warning text-dark ms-2">3</span>
+              </h5>
+            </div>
+            <div class="list-group list-group-flush">
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="mb-1 fw-medium">
+                      Review 4 hotel proposals for "Annual Sales Conference
+                      2026"
+                    </p>
+                    <small class="text-muted"
+                      >Assigned to: Global Events DMC • Due in 2 days</small
+                    >
+                  </div>
+                  <span class="badge bg-primary rounded-pill">Review</span>
+                </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="mb-1 fw-medium">
+                      Agency requested clarification on RFP "Team Offsite
+                      Kathmandu"
+                    </p>
+                    <small class="text-muted">New message • 4 hours ago</small>
+                  </div>
+                  <span class="badge bg-warning rounded-pill">Reply</span>
+                </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="mb-1 fw-medium">
+                      Approve final booking for "Leadership Retreat Q2"
+                    </p>
+                    <small class="text-muted"
+                      >Proposal selected • Ready to confirm</small
+                    >
+                  </div>
+                  <span class="badge bg-success rounded-pill">Approve</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Events Table / Cards -->
+      <div class="card shadow-sm border-0">
+        <div
+          class="card-header bg-light d-flex justify-content-between align-items-center"
+        >
+          <h5 class="mb-0">My Events</h5>
+          <div>
+            <a href="events.html?create" class="btn btn-sm btn-outline-primary">
+              <i class="fa-solid fa-plus"></i> New Event
+            </a>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Event Name</th>
+                  <th>Dates</th>
+                  <th>Location</th>
+                  <th>Agency</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Global Partner Meeting 2026</td>
+                  <td>15–18 Mar 2026</td>
+                  <td>Singapore</td>
+                  <td>Global Events DMC</td>
+                  <td>
+                    <span class="badge bg-warning">Proposals Received</span>
+                  </td>
+                  <td>
+                    <a href="events.html?id=evt_1004" class="btn btn-sm btn-outline-primary">View</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Asia-Pacific Finance Leaders Summit</td>
+                  <td>10–12 Apr 2026</td>
+                  <td>Kathmandu, Nepal</td>
+                  <td>Nepal DMC</td>
+                  <td><span class="badge bg-info">RFP Sent</span></td>
+                  <td>
+                    <a href="events.html?id=evt_1011" class="btn btn-sm btn-outline-primary">View</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Regional Marketing Retreat</td>
+                  <td>20–22 May 2026</td>
+                  <td>Pokhara</td>
+                  <td>Elite Events</td>
+                  <td><span class="badge bg-success">Booked</span></td>
+                  <td>
+                    <a href="events.html?id=evt_1007" class="btn btn-sm btn-outline-success"
+                      >Confirmed</a
+                    >
+                  </td>
+                </tr>
+                <!-- Add more rows dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

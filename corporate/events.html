@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events - Corporate Event Planner</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+
+    <!-- Includes all JS & CSS for the JavaScript Data Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <link rel="stylesheet" href="../css/corporate/style.css" />
+  </head>
+  <body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="dashboard.html">
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agencies.html">Agencies</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Notifications -->
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                type="button"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  2
+                </span>
+              </button>
+
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 2 unread messages</small>
+                </div>
+
+                <!-- Notification list (using list-group for clean separation) -->
+                <div class="list-group list-group-flush">
+                  <!-- Example item 1 -->
+                  <a
+                  href="events.html?id=evt_1005"
+                  class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                >
+                  <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-primary text-white rounded-circle p-2">
+                        <i class="fa-solid fa-calendar-check fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">
+                        New proposals received for "Employee Appreciation Day"
+                      </p>
+                      <small class="text-muted"
+                        >Global Events DMC • 2 hours ago</small
+                      >
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Example item 2 -->
+                <a
+                  href="events.html?id=evt_1010"
+                  class="list-group-item list-group-item-action px-4 py-3 border-bottom"
+                >
+                  <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-success text-white rounded-circle p-2">
+                        <i class="fa-solid fa-check-circle fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">
+                        Booking confirmed for "Nepal Tourism Board Annual Gala"
+                      </p>
+                      <small class="text-muted"
+                        >Elite Events • 3 days ago</small
+                      >
+                    </div>
+                  </div>
+                </a>
+
+                  <!-- More items can be added dynamically -->
+                  <!-- If no notifications: -->
+                  <!-- <div class="text-center py-5 text-muted">No new notifications</div> -->
+                </div>
+
+                <!-- Footer with View All link -->
+                <div class="p-3 border-top bg-light text-center">
+                  <a
+                    href="notifications.html"
+                    class="btn btn-outline-primary btn-sm w-100"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">CodePal</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li>
+                  <a class="dropdown-item cursor-pointer" id="btnSettings">
+                    Settings
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li id="logoutBtn">
+                  <a class="dropdown-item text-danger cursor-pointer">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid p-4 flex-grow-1">
+      <div class="d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">
+          All Events
+          <span class="badge bg-secondary ms-2" id="eventsCount">12</span>
+        </h5>
+
+        <button class="btn btn-sm btn-outline-secondary" id="newEventBtn">
+          <i class="fa-solid fa-plus"></i> New Event
+        </button>
+      </div>
+      <hr />
+      <div id="eventsGrid" style="height: 100%"></div>
+    </main>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <script src="../js/corporate/events.js"></script>
+    <script src="../js/utility.js"></script>
+
+    <script src="../js/ag.grid.helper.js"></script>
+    <script src="./grid/events.grid.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

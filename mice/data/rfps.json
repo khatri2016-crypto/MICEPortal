@@ -1,0 +1,102 @@
+[
+  {
+    "rfpId": "RFP-0001",
+    "eventName": "Product Launch Event Bangkok",
+    "client": "NextGen Electronics",
+    "eventDate": "2025-09-26",
+    "deadline": "Closed",
+    "hotelsInvited": "Hyatt Regency Kathmandu, Soaltee Kathmandu, Gokarna Forest Resort",
+    "proposal": "3 / 3",
+    "status": "Under Review"
+  },
+  {
+    "rfpId": "RFP-0002",
+    "eventName": "Global Partner Meeting 2026",
+    "client": "Summit Holdings Asia",
+    "eventDate": "2026-04-09",
+    "deadline": "12 days left",
+    "hotelsInvited": "Hotel Yak & Yeti, Hyatt Regency Kathmandu, Hotel Annapurna",
+    "proposal": "2 / 3",
+    "status": "Shortlisted"
+  },
+  {
+    "rfpId": "RFP-0003",
+    "eventName": "Employee Appreciation Day",
+    "client": "Everest Bank Ltd.",
+    "eventDate": "2025-07-08",
+    "deadline": "Closed",
+    "hotelsInvited": "The Dwarika's Hotel, Aloft Kathmandu Thamel, Hotel Annapurna",
+    "proposal": "3 / 3",
+    "status": "Awaiting Approval"
+  },
+  {
+    "rfpId": "RFP-0004",
+    "eventName": "Regional Marketing Retreat",
+    "client": "Ncell Pvt. Ltd.",
+    "eventDate": "2026-05-21",
+    "deadline": "Closed",
+    "hotelsInvited": "Pokhara Grande, Temple Tree Resort & Spa, Hotel Barahi",
+    "proposal": "3 / 3",
+    "status": "Booked"
+  },
+  {
+    "rfpId": "RFP-0005",
+    "eventName": "Executive Strategy Session",
+    "client": "Chaudhary Group",
+    "eventDate": "2026-06-22",
+    "deadline": "Closed",
+    "hotelsInvited": "Hotel Yak & Yeti, Hotel Annapurna, Hyatt Regency Kathmandu",
+    "proposal": "0 / 3",
+    "status": "Cancelled"
+  },
+  {
+    "rfpId": "RFP-0006",
+    "eventName": "Customer Success Forum",
+    "client": "Global Education Network",
+    "eventDate": "2026-11-26",
+    "deadline": "Closed",
+    "hotelsInvited": "Hyatt Regency Kathmandu, Gokarna Forest Resort, The Dwarika's Hotel",
+    "proposal": "4 / 4",
+    "status": "Confirmed"
+  },
+  {
+    "rfpId": "RFP-0007",
+    "eventName": "Nepal Tourism Board Annual Gala",
+    "client": "Nepal Tourism Board",
+    "eventDate": "2026-03-15",
+    "deadline": "8 days left",
+    "hotelsInvited": "The Dwarika's Hotel, Hotel Yak & Yeti, Hyatt Regency Kathmandu",
+    "proposal": "1 / 4",
+    "status": "Proposal Sent"
+  },
+  {
+    "rfpId": "RFP-0008",
+    "eventName": "Asia-Pacific Finance Leaders Summit",
+    "client": "Nepal Bankers Association",
+    "eventDate": "2026-07-12",
+    "deadline": "25 days left",
+    "hotelsInvited": "Hyatt Regency Kathmandu, Soaltee Kathmandu, Hotel Annapurna",
+    "proposal": "2 / 5",
+    "status": "Proposal Sent"
+  },
+  {
+    "rfpId": "RFP-0009",
+    "eventName": "Corporate Diwali Celebration 2026",
+    "client": "Himalayan Trading Co.",
+    "eventDate": "2026-11-05",
+    "deadline": "Closed",
+    "hotelsInvited": "Hotel Annapurna, Aloft Kathmandu Thamel, Gokarna Forest Resort",
+    "proposal": "0 / 3",
+    "status": "Proposal Sent"
+  },
+  {
+    "rfpId": "RFP-0010",
+    "eventName": "Sustainable Business Conference",
+    "client": "Room to Read Nepal",
+    "eventDate": "2026-09-10",
+    "deadline": "45 days left",
+    "hotelsInvited": "Temple Tree Resort & Spa, Pokhara Grande, Hotel Barahi",
+    "proposal": "4 / 10",
+    "status": "Proposal Sent"
+  }
+]

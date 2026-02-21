@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery - Venue</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-lg-flex flex-column">
+          <div class="sidebar-header">
+            <span class="sidebar-brand">
+              <img src="../assets/image-removebg-preview.png" alt="Logo" />
+            </span>
+          </div>
+
+          <ul class="nav nav-pills flex-column gap-1 sidebar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="event-spaces.html">
+                <i class="fa-solid fa-kaaba"></i>
+                Event Spaces
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="inquiries.html">
+                <i class="fa-brands fa-rocketchat"></i>
+                Received RFPs
+                <span class="badge text-bg-danger">2</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">
+                <i class="fa-regular fa-images"></i>
+                Gallery
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="documents.html">
+                <i class="fa-regular fa-folder"></i>
+                Documents
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-footer d-flex flex-column gap-1 mt-auto">
+            <span class="nav-item">
+              <a class="nav-link" href="profile.html">
+                <i class="fa-regular fa-circle-user"></i>
+                Profile
+              </a>
+            </span>
+
+            <span class="nav-item">
+              <a class="nav-link cursor-pointer" id="btnSettings">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+            </span>
+            <span class="nav-item" id="logoutBtn">
+              <a class="nav-link text-danger cursor-pointer">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+              </a>
+            </span>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-grow-1 p-4 d-flex flex-column gap-2">
+          <!-- Page content here -->
+          <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6 text-end">
+              <button class="btn btn-primary btn-sm" id="newUploadBtn">
+                Upload Photo
+              </button>
+            </div>
+          </div>
+          <div class="row gallery-wrapper">
+            <div class="col-12">
+              <div class="gallery-grid">
+                <!-- IMAGE HERE -->
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="informativeModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $("#newUploadBtn")
+        .off("click")
+        .on("click", () => openUploadModal());
+
+      function deleteImage() {
+        $(".toast .toast-body").text("Image deleted successfully.");
+        $(".toast").removeClass("text-bg-primary").addClass("text-bg-success");
+        $(".toast").toast("show");
+      }
+
+      function viewImage(data) {
+        $("#informativeModal .modal-dialog").addClass("modal-xl");
+        $("#informativeModal .modal-body").html(
+          `<img src=${data} class='w-100' height="500px" />`,
+        );
+
+        $("#informativeModal").modal("show");
+      }
+    </script>
+
+    <script>
+      async function loadAndRenderGallery() {
+        try {
+          // Option 1: From local JSON file (place gallery-images.json in same folder or public dir)
+          const response = await fetch("data/gallery.json");
+
+          const images = await response.json();
+          const filtered = images.filter((x) => x.venueId === 1); // ← only objects where venueId is 1
+
+          renderGallery(filtered); // use the function above
+        } catch (error) {
+          console.error("Error loading gallery:", error);
+          document.getElementById("gallery-container").innerHTML =
+            '<p style="color:red; text-align:center;">Failed to load images. Please try again later.</p>';
+        }
+      }
+
+      // Run when page loads
+      window.addEventListener("DOMContentLoaded", loadAndRenderGallery);
+
+      function renderGallery(images) {
+        const container = document.querySelector(".gallery-grid");
+
+        // Clear existing content (if needed)
+        container.innerHTML = "";
+
+        // Create document fragment for better performance
+        const fragment = document.createDocumentFragment();
+
+        images.forEach((img) => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "gallery-img-wrapper dropdown";
+
+          wrapper.innerHTML = `
+      <i class="fa-solid fa-ellipsis-vertical" data-bs-toggle="dropdown"></i>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item cursor-pointer" onclick="deleteImage('${img.imageId}')">Delete</a>
+        </li>
+        <li>
+          <a class="dropdown-item cursor-pointer" onclick="viewImage('${img.src}')">View</a>
+        </li>
+      </ul>
+      <img 
+        src="${img.thumbnailSrc || img.src}" 
+        class="gallery-img" 
+        alt="${img.alt || "Gallery image"}" 
+        data-full="${img.src}"
+        data-image-id="${img.imageId}"
+      />
+    `;
+
+          fragment.appendChild(wrapper);
+        });
+
+        // Append all at once (much better performance than += innerHTML in loop)
+        container.appendChild(fragment);
+
+        console.log(`Rendered ${images.length} gallery items`);
+      }
+    </script>
+
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>

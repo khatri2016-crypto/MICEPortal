@@ -1,0 +1,317 @@
+:root {
+    --bg: #f5f2ec;
+    --surface: #fff;
+    --ink: #1a1612;
+    --muted: #7a736b;
+    --accent: #c84b2f;
+    --accent-light: #f7e9e5;
+    --border: #e4ddd5;
+    --today-bg: #1a1612;
+    --today-ink: #f5f2ec;
+    --event-1: #c84b2f;
+    --event-2: #2d7a5f;
+    --event-3: #4a6fa5;
+    --event-4: #8b5cf6;
+  }
+
+
+  .open-btn {
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.5rem;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .open-btn:hover { background: var(--accent); }
+
+  /* ── Modal ── */
+  .modal-content {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+  }
+
+  /* ── Toolbar ── */
+  .cal-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.75rem 0;
+    flex-wrap: wrap;
+  }
+  .cal-nav-btn {
+    background: none;
+    border: 1.5px solid var(--border);
+    color: var(--ink);
+    width: 34px; height: 34px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .cal-nav-btn:hover { border-color: var(--ink); background: var(--ink); color: var(--bg); }
+
+  .cal-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    flex: 1;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  .view-btn {
+    background: none;
+    border: 1.5px solid var(--border);
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: all 0.15s;
+  }
+  .view-btn:hover, .view-btn.active {
+    background: var(--ink); border-color: var(--ink); color: var(--bg);
+  }
+  .today-btn {
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.3rem 0.9rem;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: opacity 0.15s;
+  }
+  .today-btn:hover { opacity: 0.85; }
+
+  /* ── Calendar Body ── */
+  .cal-body { padding: 1rem 1.75rem 1.5rem; }
+
+  /* Month View */
+  .month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  .month-day-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  .month-day {
+    min-height: 80px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.4rem;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .month-day:hover { background: var(--accent-light); }
+  .month-day.other-month { background: #faf8f5; }
+  .month-day.other-month .day-num { color: #ccc; }
+  .month-day.today { border-color: var(--today-bg); }
+  .month-day.today .day-num {
+    background: var(--today-bg);
+    color: var(--today-ink);
+    border-radius: 50%;
+    width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .day-num {
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .event-chip {
+    font-size: 0.62rem;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 1px 4px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+
+  /* Week View */
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  .week-day-col {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    min-height: 160px;
+  }
+  .week-day-col.today-col { border-color: var(--ink); }
+  .week-day-header {
+    background: var(--ink);
+    color: var(--bg);
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .week-day-header.today-col { background: var(--accent); }
+  .week-day-header span { display: block; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+  .week-day-events { padding: 0.35rem 0.4rem; }
+  .week-event-card {
+    border-radius: 2px;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .week-event-card:hover { opacity: 0.8; }
+  .week-event-card .wec-name {
+    font-size: 0.65rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .week-event-card .wec-client {
+    font-size: 0.58rem;
+    opacity: 0.75;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .week-no-events {
+    color: var(--border);
+    font-size: 0.65rem;
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+
+  /* Today / Day View */
+  .day-view-header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+  }
+  .day-view-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .day-booking-card {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .day-booking-card:hover { background: var(--accent-light); }
+  .day-booking-color-bar {
+    width: 4px;
+    border-radius: 4px;
+    align-self: stretch;
+    flex-shrink: 0;
+  }
+  .day-booking-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-bottom: 2px;
+  }
+  .day-booking-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .day-no-bookings {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .day-no-bookings .big-icon { font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.3; }
+
+  /* Event detail popover feel inside modal */
+  .event-detail-panel {
+    background: var(--muted);
+    color: var(--bg);
+    border-radius: 3px;
+    padding: 1rem 1.25rem;
+    margin: 0 1.75rem 1rem;
+    display: none;
+    font-size: 0.82rem;
+    position: relative;
+  }
+  .event-detail-panel.show { display: block; }
+  .event-detail-panel h6 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  .edp-close {
+    position: absolute; top: 0.6rem; right: 0.75rem;
+    background: none; border: none; color: rgba(255,255,255,0.5);
+    font-size: 1.1rem; cursor: pointer; line-height: 1;
+  }
+  .badge-status {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  /* Status colors */
+  .s-confirmed { background: #d1fae5; color: #065f46; }
+  .s-completed { background: #dbeafe; color: #1e40af; }
+  .s-in-progress { background: #fef3c7; color: #92400e; }
+
+  /* Event colors by index mod */
+  .ec-0 { background: #fde8e4; color: #c84b2f; }
+  .ec-1 { background: #d1fae5; color: #065f46; }
+  .ec-2 { background: #dbeafe; color: #1e40af; }
+  .ec-3 { background: #ede9fe; color: #5b21b6; }
+  .ec-4 { background: #fef3c7; color: #92400e; }
+
+  .legend {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    padding: 0 1.75rem 1rem;
+    font-size: 0.72rem; color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 4px; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }

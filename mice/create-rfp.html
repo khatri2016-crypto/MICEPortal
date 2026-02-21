@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create RFP - MICE Agent</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/mice/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="rfps.html">RFPs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proposals.html">Proposals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clients.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Notifications -->
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  4
+                </span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 4 unread items</small>
+                </div>
+
+                <div class="list-group list-group-flush">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary text-white rounded-circle p-2">
+                          <i class="fa-solid fa-file-lines fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          New proposal arrived for TechCorp Annual Summit 2026
+                        </p>
+                        <small class="text-muted"
+                          >Hyatt Regency • 1 hour ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-danger text-white rounded-circle p-2">
+                          <i class="fa-solid fa-hourglass-end fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          RFP deadline tomorrow: Employee Appreciation Day
+                        </p>
+                        <small class="text-muted"
+                          >System alert • 3 hours ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- More items possible -->
+                </div>
+
+                <div class="p-3 border-top bg-light text-center">
+                  <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">Sachin</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../login.html"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- create-rfp.html (concise MVP version) -->
+    <!-- ... navbar same as before ... -->
+
+    <main class="container-fluid px-4 py-4 flex-grow-1 d-flex flex-column">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>Create New RFP</h3>
+        <a href="rfps.html" class="btn btn-outline-secondary"
+          ><i class="fas fa-arrow-left me-2"></i>Cancel</a
+        >
+      </div>
+
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white"><h5>Event Basics</h5></div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label class="form-label fw-semibold">Event Name *</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                placeholder="e.g., TechCorp Annual Summit 2026"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Client *</label>
+              <select class="form-select" required>
+                <option value="">Select or type...</option>
+                <!-- options from agency clients -->
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Event Type</label>
+              <select class="form-select">
+                <option>Conference</option>
+                <option>Retreat / Offsite</option>
+                <option>Gala / Dinner</option>
+                <option>Product Launch</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fw-semibold">Expected Pax *</label>
+              <input type="number" class="form-control" min="10" required />
+            </div>
+            <div class="col-md-8">
+              <label class="form-label fw-semibold"
+                >Preferred Location(s) *</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                required
+                placeholder="e.g., Kathmandu, Pokhara or flexible"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Event Dates *</label>
+              <div class="input-group">
+                <input type="date" class="form-control" required />
+                <span class="input-group-text">–</span>
+                <input type="date" class="form-control" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">RFP Deadline *</label>
+              <input type="date" class="form-control" required />
+              <small class="text-muted">Hotels must reply by this date</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white">
+          <h5>Accommodation & Meeting Needs</h5>
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold"
+                >Total Room Nights Needed *</label
+              >
+              <input type="number" class="form-control" min="1" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Peak Night Rooms *</label>
+              <input type="number" class="form-control" min="1" required />
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold"
+                >Meeting Space Required</label
+              >
+              <div class="input-group">
+                <input type="number" class="form-control" placeholder="Pax" />
+                <select class="form-select" style="max-width: 180px">
+                  <option>Theater</option>
+                  <option>Classroom</option>
+                  <option>U-Shape</option>
+                  <option>Banquet</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label"
+                >Short Description / Special Requests</label
+              >
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Key requirements, F&B style, AV needs, dietary, etc..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-4">
+        <div
+          class="card-header bg-white w-100 d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <h5>Invite Hotels & Venues</h5>
+            <small class="text-muted d-block mt-1"
+              >Select one or more properties to receive this RFP</small
+            >
+          </div>
+          <span
+            class="badge bg-indigo-subtle text-indigo px-3 py-2 fs-6"
+            id="selectedCountBadge"
+          >
+            0 selected
+          </span>
+        </div>
+
+        <div class="card-body p-4">
+          <!-- Searchable filter input -->
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="fas fa-search text-muted"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control border-start-0"
+              id="hotelSearchInput"
+              placeholder="Search by name, city, star rating…"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- The actual multi-select -->
+          <select
+            class="form-select form-select-lg shadow-sm border rounded-3"
+            multiple
+            size="10"
+            id="hotelMultiSelect"
+            required
+            style="font-size: 0.95rem; line-height: 1.6"
+          >
+            <!-- Populated dynamically from JSON -->
+            <!-- Example items -->
+            <!-- <option value="h1">Hyatt Regency Kathmandu – 5★ – Kathmandu</option>
+            <option value="h2">
+              Hotel Yak & Yeti – 5★ – Durbar Marg, Kathmandu
+            </option>
+            <option value="h3">Radisson Hotel Kathmandu – 4★ – Lazimpat</option>
+            <option value="h4">Pokhara Grande – 5★ – Lakeside, Pokhara</option>
+            <option value="h5">Temple Tree Resort & Spa – 5★ – Pokhara</option>
+            <option value="h6">Soaltee Kathmandu – 5★ – Tahachal</option>
+            <option value="h7">Dwarika's Hotel – 5★ – Battisputali</option> -->
+            <!-- ... more -->
+          </select>
+
+          <div class="form-text text-muted mt-2">
+            • Hold <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> to select multiple<br />
+            • Use the search field to filter the list quickly
+          </div>
+        </div>
+      </div>
+
+      <div class="text-end">
+        <button
+          type="button"
+          class="btn btn-outline-secondary me-2"
+          id="draftRfpBtn"
+        >
+          Save as Draft
+        </button>
+        <button type="submit" class="btn btn-primary" id="createRfpBtn">
+          <i class="fas fa-paper-plane me-2"></i>Create RFP
+        </button>
+      </div>
+    </main>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- ... scripts ... -->
+    <script src="../js/mice/rfp.js"></script>
+
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

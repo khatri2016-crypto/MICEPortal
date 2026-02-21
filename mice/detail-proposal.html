@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Proposal - MICE Agent</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/mice/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rfps.html">RFPs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="proposals.html">Proposals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clients.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Notifications -->
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  4
+                </span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 4 unread items</small>
+                </div>
+
+                <div class="list-group list-group-flush">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary text-white rounded-circle p-2">
+                          <i class="fa-solid fa-file-lines fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          New proposal arrived for TechCorp Annual Summit 2026
+                        </p>
+                        <small class="text-muted"
+                          >Hyatt Regency • 1 hour ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-danger text-white rounded-circle p-2">
+                          <i class="fa-solid fa-hourglass-end fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          RFP deadline tomorrow: Employee Appreciation Day
+                        </p>
+                        <small class="text-muted"
+                          >System alert • 3 hours ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- More items possible -->
+                </div>
+
+                <div class="p-3 border-top bg-light text-center">
+                  <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">Sachin</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../login.html"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-4 py-4">
+      <!-- Breadcrumb + Title + Status -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="rfps.html">RFPs</a></li>
+          <li class="breadcrumb-item">
+            <a id="bcEventName" href="rfp-detail.html?id=rfp_1001"
+              >TechCorp Annual Summit 2026</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <span id="bcHotelName">Hyatt Regency</span> Proposal
+          </li>
+        </ol>
+      </nav>
+
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4 pb-3 border-bottom"
+      >
+        <div>
+          <h3 class="fw-bold mb-1">Proposal from <span id="hotelName">Hyatt Regency Kathmandu</span></h3>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <span class="badge bg-success fs-6 px-3 py-2" id="status">Received</span>
+            <small class="text-muted"
+              >Submitted 2 hours ago • Last message 45 min ago</small
+            >
+          </div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <button
+            class="btn btn-outline-warning"
+            id="requestRevisionBtn"
+            data-bs-toggle="modal"
+            data-bs-target="#revisionRequestModal"
+          >
+            <i class="fas fa-edit me-1"></i>Request Revision
+          </button>
+          <button class="btn btn-outline-danger" id="rejectBtn">
+            <i class="fas fa-times me-1"></i>Reject
+          </button>
+          <button class="btn btn-success" id="acceptBtn">
+            <i class="fas fa-check me-1"></i>Accept & Book
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Left column – Proposal Details + RFP Context -->
+        <div class="col-lg-8">
+          <!-- Proposal Summary Card -->
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-white py-3">
+              <h5 class="mb-0">
+                <i class="fas fa-file-alt me-2 text-primary"></i>Proposal
+                Details
+              </h5>
+            </div>
+            <div class="card-body">
+              <dl class="row g-3 mb-0">
+                <dt class="col-sm-4 col-md-3 text-muted">
+                  Quoted Peak Night Rate
+                </dt>
+                <dd class="col-sm-8 col-md-9 fw-bold text-success">
+                  NPR <span id="amount">18,500</span>
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Rooms Available</dt>
+                <dd class="col-sm-8 col-md-9">
+                  92 / 100 (peak night) • 280 total
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">
+                  Concessions / Special Offers
+                </dt>
+                <dd class="col-sm-8 col-md-9">
+                  Complimentary upgrade for 10 rooms if confirmed by Feb 18 •
+                  Free early check-in
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">F&B Package</dt>
+                <dd class="col-sm-8 col-md-9">
+                  Coffee breaks included • Buffet lunch NPR 2,800 pp • Gala
+                  dinner NPR 4,500 pp
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">AV / Tech Included</dt>
+                <dd class="col-sm-8 col-md-9">
+                  Projector, screen, 4 wireless mics, high-speed Wi-Fi
+                  (unlimited)
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Attachments</dt>
+                <dd class="col-sm-8 col-md-9">
+                  <a href="#" class="btn btn-sm btn-outline-secondary me-2"
+                    ><i class="fas fa-file-pdf me-1"></i>Proposal PDF</a
+                  >
+                  <a href="#" class="btn btn-sm btn-outline-secondary"
+                    ><i class="fas fa-image me-1"></i>Meeting Room Layout</a
+                  >
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Last Updated</dt>
+                <dd class="col-sm-8 col-md-9">Today at 14:20</dd>
+              </dl>
+            </div>
+          </div>
+
+          <!-- RFP Context Card (quick reminder) -->
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-white py-3">
+              <h5 class="mb-0">
+                <i class="fas fa-info-circle me-2 text-primary"></i>Original RFP
+                Context
+              </h5>
+            </div>
+            <div class="card-body">
+              <dl class="row g-3 mb-0">
+                <dt class="col-sm-4 text-muted">Event</dt>
+                <dd class="col-sm-8 fw-medium" id="ddEventName">TechCorp Annual Summit 2026</dd>
+                <dt class="col-sm-4 text-muted">Dates</dt>
+                <dd class="col-sm-8" id="ddEventDate">Jun 10–13, 2026 (flexible ±2 days)</dd>
+                <dt class="col-sm-4 text-muted">Pax</dt>
+                <dd class="col-sm-8">140–160</dd>
+                <dt class="col-sm-4 text-muted">Meeting Setup</dt>
+                <dd class="col-sm-8">
+                  Theater 150 pax + 2 breakouts (60 pax each)
+                </dd>
+                <dt class="col-sm-4 text-muted">Deadline</dt>
+                <dd class="col-sm-8" id="ddDeadline">Feb 20, 2026 (2 days left)</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sidebar – Messages & Actions -->
+        <div class="col-lg-4">
+          <!-- Messages / Negotiation Thread -->
+          <div class="card shadow-sm border-0">
+            <div
+              class="card-header bg-white py-3 d-flex justify-content-between align-items-center"
+            >
+              <h5 class="mb-0">
+                <i class="fas fa-comments me-2 text-primary"></i>Messages
+              </h5>
+              <span class="badge bg-primary">2 unread</span>
+            </div>
+            <div
+              class="card-body p-0"
+              style="max-height: 700px; overflow-y: auto"
+            >
+              <div class="list-group list-group-flush" id="messageList">
+                <!-- Example messages -->
+                <div class="list-group-item px-4 py-3 bg-light">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-primary text-white rounded-circle p-2">
+                        <i class="fas fa-user-tie"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">You (Sachin)</p>
+                      <small
+                        >Can you include complimentary breakfast for the
+                        VIPs?</small
+                      >
+                      <div class="mt-1">
+                        <small class="text-muted">Today 10:15</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item px-4 py-3">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-secondary text-white rounded-circle p-2">
+                        <i class="fas fa-hotel"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium" id="messageHotelName">Hyatt Regency</p>
+                      <small
+                        >Yes, we can include breakfast for up to 15 VIPs at no
+                        extra cost. Shall we update the proposal?</small
+                      >
+                      <div class="mt-1">
+                        <small class="text-muted">Today 10:45</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- More messages... -->
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0 p-3">
+              <div class="input-group">
+                <textarea
+                  class="form-control"
+                  rows="2"
+                  id="message"
+                  placeholder="Reply to hotel..."
+                ></textarea>
+                <button class="btn btn-primary" id="replyBtn">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal" tabindex="-1" id="confirmationModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-danger btn-sm"
+              id="confirmRejectBtn"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Revision Request Modal -->
+    <div
+      class="modal fade"
+      id="revisionRequestModal"
+      tabindex="-1"
+      aria-labelledby="revisionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content overflow-hidden">
+          <!-- Header -->
+          <div class="modal-header bg-gradient bg-light border-0 px-4 py-3">
+            <h5 class="modal-title fw-semibold" id="revisionModalLabel">
+              Request Revision from
+              <span id="hotelNameInModal">Hyatt Regency Kathmandu</span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body px-4 py-4">
+            <!-- Context summary -->
+            <div
+              class="alert alert-info border-0 bg-info-subtle text-info-emphasis mb-4"
+            >
+              <strong>Event:</strong> TechCorp Annual Summit 2026<br />
+              <strong>Current status:</strong> Received – Peak rate NPR 18,500
+            </div>
+
+            <!-- Quick templates -->
+            <label class="form-label fw-semibold mb-2"
+              >Quick Templates (click to apply)</label
+            >
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm template-btn"
+                data-template="rate"
+              >
+                Lower the rate
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm template-btn"
+                data-template="rooms"
+              >
+                More rooms needed
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm template-btn"
+                data-template="breakfast"
+              >
+                Add complimentary breakfast
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm template-btn"
+                data-template="av"
+              >
+                Improve AV package
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm template-btn"
+                data-template="concessions"
+              >
+                More concessions / upgrades
+              </button>
+            </div>
+
+            <!-- Main request field -->
+            <div class="mb-4">
+              <label for="revisionRequestText" class="form-label fw-semibold">
+                Your specific request / changes needed
+              </label>
+              <textarea
+                class="form-control"
+                id="revisionRequestText"
+                rows="5"
+                placeholder="e.g. Can you reduce the peak night rate to NPR 17,800? Also include breakfast for all 150 delegates..."
+              ></textarea>
+              <div class="form-text text-muted mt-1">
+                Be as specific as possible — hotels can respond faster with
+                clear instructions.
+              </div>
+            </div>
+
+            <!-- Options -->
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="urgentRevision"
+              />
+              <label class="form-check-label" for="urgentRevision">
+                Mark as urgent (hotel receives priority notification)
+              </label>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="modal-footer bg-light border-0 px-4 py-3">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning px-4"
+              id="sendRevisionBtn"
+            >
+              <i class="fas fa-paper-plane me-2"></i>Send Revision Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/utility.js"></script>
+    <script src="../js/mice/detail.proposal.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RFP Detail – TechCorp Annual Summit 2026 | MICE Platform</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/mice/style.css" />
+
+    <!-- Includes all JS & CSS for the JavaScript Data Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="rfps.html">RFPs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proposals.html">Proposals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clients.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Notifications -->
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  4
+                </span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 4 unread items</small>
+                </div>
+
+                <div class="list-group list-group-flush">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary text-white rounded-circle p-2">
+                          <i class="fa-solid fa-file-lines fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          New proposal arrived for TechCorp Annual Summit 2026
+                        </p>
+                        <small class="text-muted"
+                          >Hyatt Regency • 1 hour ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-danger text-white rounded-circle p-2">
+                          <i class="fa-solid fa-hourglass-end fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          RFP deadline tomorrow: Employee Appreciation Day
+                        </p>
+                        <small class="text-muted"
+                          >System alert • 3 hours ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- More items possible -->
+                </div>
+
+                <div class="p-3 border-top bg-light text-center">
+                  <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">Sachin</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../login.html"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-3 px-md-4 py-4" style="margin-top: 64px">
+      <!-- Sticky-ish header row -->
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4 pb-3 border-bottom"
+      >
+        <div>
+          <h3 class="fw-bold mb-1" id="eventName">
+            TechCorp Annual Summit 2026
+          </h3>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <span class="badge bg-warning fs-6 px-3 py-2" id="status"
+              >Negotiating</span
+            >
+            <small class="text-muted"
+              >Created 3 days ago • Deadline:
+              <span id="deadline">Feb 20, 2026</span></small
+            >
+          </div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-outline-primary" id="sendReminderBtn">
+            <i class="fas fa-envelope me-1"></i>Send Reminder
+          </button>
+          <button class="btn btn-outline-secondary" id="editRfpBtn">
+            <i class="fas fa-edit me-1"></i>Edit RFP
+          </button>
+          <button class="btn btn-primary" id="inviteMoreHotelsBtn">
+            <i class="fas fa-paper-plane me-1"></i>Invite More Hotels
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Left / Main column -->
+        <div class="col-lg-8">
+          <!-- RFP Summary Card -->
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-white py-3">
+              <h5 class="mb-0">
+                <i class="fas fa-info-circle me-2 text-primary"></i>Event
+                Details
+              </h5>
+            </div>
+            <div class="card-body">
+              <dl class="row g-3 mb-0">
+                <dt class="col-sm-4 col-md-3 text-muted">Client</dt>
+                <dd class="col-sm-8 col-md-9 fw-medium" id="clientName">
+                  TechCorp Ltd
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Event Type</dt>
+                <dd class="col-sm-8 col-md-9">Conference / Summit</dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Dates</dt>
+                <dd class="col-sm-8 col-md-9" id="eventDate">
+                  June 10–13, 2026 (flexible ±2 days)
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Location</dt>
+                <dd class="col-sm-8 col-md-9">Kathmandu or Pokhara</dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Expected Pax</dt>
+                <dd class="col-sm-8 col-md-9">140–160</dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Rooms</dt>
+                <dd class="col-sm-8 col-md-9">
+                  Peak night: 85 rooms • Total room nights: 340
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">Meeting Space</dt>
+                <dd class="col-sm-8 col-md-9">
+                  Theater style • 150 pax + 2 breakout rooms (60 pax each)
+                </dd>
+
+                <dt class="col-sm-4 col-md-3 text-muted">
+                  Notes / Special Requests
+                </dt>
+                <dd class="col-sm-8 col-md-9">
+                  Hybrid event support • Vegetarian + Halal options • High-speed
+                  Wi-Fi for all pax
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Proposals Table -->
+          <div class="card shadow-sm border-0">
+            <div
+              class="card-header bg-white d-flex justify-content-between align-items-center py-3"
+            >
+              <h5 class="mb-0">
+                <i class="fas fa-envelope-open-text me-2 text-primary"></i
+                >Proposals <span id="proposal">(9 / 14)</span>
+              </h5>
+              <button
+                class="btn btn-sm btn-outline-primary"
+                data-action="compare-selected"
+              >
+                <i class="fas fa-columns me-1"></i>Compare Selected
+              </button>
+            </div>
+            <div id="proposalsGrid" style="height: 400px"></div>
+          </div>
+        </div>
+
+        <!-- Right Sidebar – Chat & Activity -->
+        <div class="col-lg-4 d-flex flex-column">
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body">
+              <h6 class="fw-semibold">Hotels Invited</h6>
+              <ul class="list-unstyled mb-0" id="hotelsInvitedList"></ul>
+            </div>
+          </div>
+
+          <!-- Quick Stats / Next Actions -->
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body">
+              <h6 class="fw-semibold mb-3">Next Actions</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <i class="fas fa-clock me-2 text-warning"></i>3 proposals need
+                  review
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-comment-dots me-2 text-primary"></i>2 new
+                  messages from hotels
+                </li>
+                <li>
+                  <i class="fas fa-hourglass-half me-2 text-danger"></i>Deadline
+                  in 4 days
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- In-platform Chat / Activity Feed -->
+          <div class="card shadow-sm border-0 flex-grow-1">
+            <div class="card-header bg-white py-3">
+              <h5 class="mb-0">
+                <i class="fas fa-comments me-2 text-primary"></i>Messages &
+                Activity
+              </h5>
+            </div>
+            <div class="p-0" style="max-height: 500px; overflow-y: auto">
+              <div class="list-group list-group-flush">
+                <div class="list-group-item px-4 py-3">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-primary text-white rounded-circle p-2">
+                        <i class="fas fa-hotel"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">Hyatt Regency</p>
+                      <small class="text-muted"
+                        >We can offer complimentary upgrade for 10 rooms if
+                        confirmed by Feb 18.</small
+                      >
+                      <div class="mt-2">
+                        <small class="text-muted">1 hour ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- More messages / system events -->
+              </div>
+            </div>
+            <div class="card-footer bg-white border-0 p-3">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Reply or add note..."
+                />
+                <button class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="confirmationModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare Proposals Modal -->
+    <div
+      class="modal fade"
+      id="compareProposalsModal"
+      tabindex="-1"
+      aria-labelledby="compareModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-white border-bottom px-4 py-3">
+            <h5 class="modal-title fw-bold" id="compareModalLabel">
+              Compare Selected Proposals
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table
+                class="table table-bordered table-hover mb-0 compare-table"
+              >
+                <thead class="sticky-top bg-white shadow-sm">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="bg-light"
+                      style="
+                        min-width: 220px;
+                        position: sticky;
+                        left: 0;
+                        z-index: 2;
+                      "
+                    >
+                      Criteria
+                    </th>
+                    <!-- Dynamic hotel columns will be inserted here -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows will be dynamically built -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- No selection fallback -->
+            <div
+              id="noSelectionMessage"
+              class="text-center py-5 text-muted d-none"
+            >
+              <i
+                class="fas fa-exclamation-triangle fa-3x mb-3 text-warning"
+              ></i>
+              <p>No proposals selected for comparison.</p>
+              <small>Select 2–5 proposals from the table and try again.</small>
+            </div>
+          </div>
+
+          <div class="modal-footer bg-light border-0 px-4 py-3">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="exportComparisonBtn"
+              disabled
+            >
+              <i class="fas fa-download me-2"></i>Export Comparison
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/utility.js"></script>
+
+    <!-- Add your rfp-detail specific JS here -->
+    <script src="../js/mice/detail.rfp.js"></script>
+    <script src="../js/ag.grid.helper.js"></script>
+    <script src="./grid/proposals.grid.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

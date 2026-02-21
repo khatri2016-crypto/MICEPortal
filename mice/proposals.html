@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proposals - MICE Agent</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/mice/style.css" />
+
+    <!-- Includes all JS & CSS for the JavaScript Data Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rfps.html">RFPs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="proposals.html">Proposals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clients.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+          </ul>
+          <!-- Notifications + User dropdown (copy from previous pages) -->
+          <div class="d-flex align-items-center gap-3">…</div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-4 py-4">
+      <!-- KPI Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Proposals Received</p>
+              <h2 class="mb-0">47</h2>
+              <small class="text-success"
+                ><i class="fas fa-arrow-up me-1"></i>12 new this week</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Awaiting Review</p>
+              <h2 class="mb-0">11</h2>
+              <small class="text-warning"
+                ><i class="fas fa-clock me-1"></i>3 urgent</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">In Negotiation</p>
+              <h2 class="mb-0">6</h2>
+              <small class="text-info"
+                ><i class="fas fa-comments me-1"></i>2 new messages</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Accepted (Feb)</p>
+              <h2 class="mb-0">4</h2>
+              <small class="text-success">+33% vs last month</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Proposals Table -->
+      <div class="card mb-4">
+        <div
+          class="card-header bg-white d-flex justify-content-between align-items-center"
+        >
+          <h5 class="mb-0">All Proposals</h5>
+          <div class="d-flex gap-2">
+            <button
+              class="btn btn-sm btn-outline-primary"
+              id="compareSelectedBtn"
+              data-action="compare-selected"
+            >
+              <i class="fas fa-columns me-1"></i>Compare Selected
+            </button>
+          </div>
+        </div>
+        <div id="proposalsGrid" style="height: 50vh"></div>
+      </div>
+    </main>
+
+    <div class="modal" tabindex="-1" id="confirmationModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+    <!-- Compare Proposals Modal -->
+    <div
+      class="modal fade"
+      id="compareProposalsModal"
+      tabindex="-1"
+      aria-labelledby="compareModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-white border-bottom px-4 py-3">
+            <h5 class="modal-title fw-bold" id="compareModalLabel">
+              Compare Selected Proposals
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table
+                class="table table-bordered table-hover mb-0 compare-table"
+              >
+                <thead class="sticky-top bg-white shadow-sm">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="bg-light"
+                      style="
+                        min-width: 220px;
+                        position: sticky;
+                        left: 0;
+                        z-index: 2;
+                      "
+                    >
+                      Criteria
+                    </th>
+                    <!-- Dynamic hotel columns will be inserted here -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows will be dynamically built -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- No selection fallback -->
+            <div
+              id="noSelectionMessage"
+              class="text-center py-5 text-muted d-none"
+            >
+              <i
+                class="fas fa-exclamation-triangle fa-3x mb-3 text-warning"
+              ></i>
+              <p>No proposals selected for comparison.</p>
+              <small>Select 2–5 proposals from the table and try again.</small>
+            </div>
+          </div>
+
+          <div class="modal-footer bg-light border-0 px-4 py-3">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="exportComparisonBtn"
+              disabled
+            >
+              <i class="fas fa-download me-2"></i>Export Comparison
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/utility.js"></script>
+    <script src="../js/mice/proposal.js"></script>
+    <script src="../js/ag.grid.helper.js"></script>
+    <script src="./grid/proposals.grid.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.app-navbar {
+  /* If your navbar is fixed/sticky, keep it that way */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+main {
+  height: calc(
+    100vh - var(--navbar-height, 56px)
+  ); /* fallback if --navbar-height not set */
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR BASE */
+.app-navbar {
+  padding-top: 15px;
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: "Inter", sans-serif;
+}
+
+/* Brand */
+.app-navbar .app-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Nav links */
+.nav-link, .dropdown-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-link:hover, .dropdown-item:hover {
+  color: #1d4ed8;
+  background-color: rgba(37, 99, 235, 0.08);
+}
+
+.nav-link.active, .dropdown-item.active, .btn.active {
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.12);
+}
+
+/* Icon button */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+}
+
+.btn-icon:hover {
+  background-color: #f1f5f9;
+  color: #1d4ed8;
+}
+.app-navbar i {
+  font-size: 20px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+}
+
+.dropdown-item {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.modal-title {
+  text-transform: capitalize;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.toast {
+  z-index: 2000 !important;
+}
+.quick-stats-card {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.quick-stats-card:hover {
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.18) !important;
+  border-color: #0d6efd !important;
+}
+/* Unread style (subtle background or left border) */
+.unread {
+  background-color: rgba(13, 110, 253, 0.08); /* light blue tint */
+  border-left: 4px solid #0d6efd;
+}

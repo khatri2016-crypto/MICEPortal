@@ -1,0 +1,502 @@
+[
+  {
+    "imageId": "IMG-0001",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-grand-001/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-grand-001/400/300",
+    "alt": "Grand Ballroom - Wide view with stage and round tables",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-01",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0002",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-grand-002/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-grand-002/400/300",
+    "alt": "Grand Ballroom - Evening reception lighting",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-02",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0003",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-crystal-001/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-crystal-001/400/300",
+    "alt": "Crystal Hall - Theater setup with chandeliers",
+    "uploadedBy": "Operations Team",
+    "uploadedOn": "2026-02-03",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0004",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-crystal-002/1024/683",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-crystal-002/400/300",
+    "alt": "Crystal Hall - Divisible into sections for breakout",
+    "uploadedBy": "Technical Manager",
+    "uploadedOn": "2026-02-04",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0005",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-ivory-001/1000/1000",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-ivory-001/300/300",
+    "alt": "Ivory Lounge - VIP cocktail area with sofas",
+    "uploadedBy": "Design Team",
+    "uploadedOn": "2026-02-05",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0006",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-amber-001/900/1200",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-amber-001/300/400",
+    "alt": "Amber Room - Warm wooden breakout space",
+    "uploadedBy": "Venue Admin",
+    "uploadedOn": "2026-02-06",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0007",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-pearl-001/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-pearl-001/400/300",
+    "alt": "Pearl Terrace - Semi-outdoor attached to ballroom",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-07",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0008",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-ballroom-wedding/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-ballroom-wedding/400/300",
+    "alt": "Grand Ballroom - Fully decorated wedding setup",
+    "uploadedBy": "Catering Manager",
+    "uploadedOn": "2026-02-08",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0009",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-foyer-001/1200/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-foyer-001/400/300",
+    "alt": "Main foyer entrance to Grand Ballroom",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-09",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0010",
+    "venueId": 1,
+    "src": "https://picsum.photos/seed/v1-stage-led/1000/667",
+    "thumbnailSrc": "https://picsum.photos/seed/v1-stage-led/400/300",
+    "alt": "Built-in stage with large LED screen",
+    "uploadedBy": "Technical Manager",
+    "uploadedOn": "2026-02-10",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0011",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-emerald-001/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-emerald-001/400/300",
+    "alt": "Emerald Room - Classroom setup with daylight",
+    "uploadedBy": "Venue Admin",
+    "uploadedOn": "2026-02-01",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0012",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-emerald-002/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-emerald-002/400/300",
+    "alt": "Emerald Room - Theater style for 120 pax",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-02",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0013",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-sapphire-001/1024/683",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-sapphire-001/400/300",
+    "alt": "Sapphire Suite - Modern boardroom with screen",
+    "uploadedBy": "Operations Team",
+    "uploadedOn": "2026-02-03",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0014",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-jade-001/1000/1000",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-jade-001/300/300",
+    "alt": "Jade Studio - Flexible creative space",
+    "uploadedBy": "Design Team",
+    "uploadedOn": "2026-02-04",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0015",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-opal-001/900/1200",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-opal-001/300/400",
+    "alt": "Opal Meeting Room - Small executive setup",
+    "uploadedBy": "Venue Admin",
+    "uploadedOn": "2026-02-05",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0016",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-turquoise-001/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-turquoise-001/400/300",
+    "alt": "Turquoise Lounge - Relaxed informal area",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-06",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0017",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-breakout-001/1200/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-breakout-001/400/300",
+    "alt": "Breakout area adjacent to Emerald Room",
+    "uploadedBy": "Operations Team",
+    "uploadedOn": "2026-02-07",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0018",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-av-console/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-av-console/400/300",
+    "alt": "Conference AV control booth",
+    "uploadedBy": "Technical Manager",
+    "uploadedOn": "2026-02-08",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0019",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-lobby-002/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-lobby-002/400/300",
+    "alt": "Venue reception and waiting area",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-09",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0020",
+    "venueId": 2,
+    "src": "https://picsum.photos/seed/v2-workshop/1024/683",
+    "thumbnailSrc": "https://picsum.photos/seed/v2-workshop/400/300",
+    "alt": "Jade Studio - Group activity layout",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-10",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0021",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-roof-day/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-roof-day/400/300",
+    "alt": "Rooftop Terrace - Daytime city panorama",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-01",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0022",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-roof-sunset/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-roof-sunset/400/300",
+    "alt": "Rooftop Terrace - Golden hour view",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-02",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0023",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-skydeck/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-skydeck/400/300",
+    "alt": "Sky Deck Lounge - Covered seating with fire pits",
+    "uploadedBy": "Design Team",
+    "uploadedOn": "2026-02-03",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0024",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-sunset-platform/1200/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-sunset-platform/400/300",
+    "alt": "Sunset Platform - Open standing area",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-04",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0025",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-moonlight/1000/1000",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-moonlight/300/300",
+    "alt": "Moonlight Corner - Intimate cozy zone",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-05",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0026",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-starbar/900/1200",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-starbar/300/400",
+    "alt": "Starlight Bar - Rooftop bar counter",
+    "uploadedBy": "Catering Manager",
+    "uploadedOn": "2026-02-06",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0027",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-cocktail-night/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-cocktail-night/400/300",
+    "alt": "Rooftop evening cocktail reception",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-07",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0028",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-roof-stringlights/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-roof-stringlights/400/300",
+    "alt": "Rooftop decorated with string lights",
+    "uploadedBy": "Design Team",
+    "uploadedOn": "2026-02-08",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0029",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-roof-view-001/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-roof-view-001/400/300",
+    "alt": "Panoramic rooftop city skyline",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-09",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0030",
+    "venueId": 3,
+    "src": "https://picsum.photos/seed/v3-roof-dj/1024/683",
+    "thumbnailSrc": "https://picsum.photos/seed/v3-roof-dj/400/300",
+    "alt": "Rooftop DJ and dance floor setup",
+    "uploadedBy": "Technical Manager",
+    "uploadedOn": "2026-02-10",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0031",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-boardA-001/1200/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-boardA-001/400/300",
+    "alt": "Boardroom A - Large executive table",
+    "uploadedBy": "Operations Team",
+    "uploadedOn": "2026-02-01",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0032",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-boardB-001/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-boardB-001/400/300",
+    "alt": "Boardroom B - Minimalist meeting room",
+    "uploadedBy": "Venue Admin",
+    "uploadedOn": "2026-02-02",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0033",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-execsuite/1000/1000",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-execsuite/300/300",
+    "alt": "Executive Suite - Private office style",
+    "uploadedBy": "Design Team",
+    "uploadedOn": "2026-02-03",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0034",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-strategy/900/1200",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-strategy/300/400",
+    "alt": "Strategy Room - Round table brainstorming",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-04",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0035",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-focuspod/800/1200",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-focuspod/300/400",
+    "alt": "Focus Pod - Small enclosed 1:1 booth",
+    "uploadedBy": "Operations Team",
+    "uploadedOn": "2026-02-05",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0036",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-av-screen/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-av-screen/400/300",
+    "alt": "Boardroom large presentation screen",
+    "uploadedBy": "Technical Manager",
+    "uploadedOn": "2026-02-06",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0037",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-corridor/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-corridor/400/300",
+    "alt": "Executive floor corridor",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-07",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0038",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-meeting-001/1024/683",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-meeting-001/400/300",
+    "alt": "Small meeting room with privacy glass",
+    "uploadedBy": "Venue Admin",
+    "uploadedOn": "2026-02-08",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0039",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-coffee-area/1200/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-coffee-area/400/300",
+    "alt": "Executive coffee & refreshment nook",
+    "uploadedBy": "Catering Manager",
+    "uploadedOn": "2026-02-09",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0040",
+    "venueId": 4,
+    "src": "https://picsum.photos/seed/v4-board-night/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v4-board-night/400/300",
+    "alt": "Boardroom - Late evening strategy session",
+    "uploadedBy": "Operations Team",
+    "uploadedOn": "2026-02-10",
+    "visibility": "Internal"
+  },
+  {
+    "imageId": "IMG-0041",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-pavilion-001/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-pavilion-001/400/300",
+    "alt": "Garden Pavilion - Covered ceremony area",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-01",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0042",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-lawn-001/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-lawn-001/400/300",
+    "alt": "Rose Garden Lawn - Open green space",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-02",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0043",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-gazebo/900/1200",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-gazebo/300/400",
+    "alt": "Lotus Gazebo - Romantic water feature",
+    "uploadedBy": "Design Team",
+    "uploadedOn": "2026-02-03",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0044",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-orchard/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-orchard/400/300",
+    "alt": "Orchard Deck - Wooden deck under trees",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-04",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0045",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-courtyard/1200/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-courtyard/400/300",
+    "alt": "Heritage Courtyard - Stone fountain area",
+    "uploadedBy": "Venue Admin",
+    "uploadedOn": "2026-02-05",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0046",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-wedding-lawn/1600/900",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-wedding-lawn/400/300",
+    "alt": "Garden lawn - Wedding mandap setup",
+    "uploadedBy": "Catering Manager",
+    "uploadedOn": "2026-02-06",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0047",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-garden-evening/1400/800",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-garden-evening/400/300",
+    "alt": "Garden - Fairy lights at dusk",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-07",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0048",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-outdoor-dining/1024/683",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-outdoor-dining/400/300",
+    "alt": "Outdoor dining tables on lawn",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-08",
+    "visibility": "Client"
+  },
+  {
+    "imageId": "IMG-0049",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-yoga-lawn/1280/720",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-yoga-lawn/400/300",
+    "alt": "Garden lawn - Yoga & wellness setup",
+    "uploadedBy": "Marketing Team",
+    "uploadedOn": "2026-02-09",
+    "visibility": "Public"
+  },
+  {
+    "imageId": "IMG-0050",
+    "venueId": 5,
+    "src": "https://picsum.photos/seed/v5-cultural-night/1000/1000",
+    "thumbnailSrc": "https://picsum.photos/seed/v5-cultural-night/300/300",
+    "alt": "Courtyard - Evening cultural performance",
+    "uploadedBy": "Event Coordinator",
+    "uploadedOn": "2026-02-10",
+    "visibility": "Public"
+  }
+]

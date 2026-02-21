@@ -1,0 +1,162 @@
+[
+  {
+    "client": "Asia Pacific Events",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Marketing Strategy Workshop",
+    "status": "Active"
+  },
+  {
+    "client": "Asia Summit Organizers",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Innovation Hackathon",
+    "status": "Past Client"
+  },
+  {
+    "client": "Chaudhary Group",
+    "industry": "Conglomerate",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Executive Board Meeting",
+    "status": "Active"
+  },
+  {
+    "client": "Everest Bank Ltd.",
+    "industry": "Banking & Finance",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Team Offsite Pokhara",
+    "status": "Active"
+  },
+  {
+    "client": "Festive Events India",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Annual Awards Night",
+    "status": "Past Client"
+  },
+  {
+    "client": "Global Education Network",
+    "industry": "Non-Profit / Education",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Employee Wellness Retreat",
+    "status": "Active"
+  },
+  {
+    "client": "Green Meetings Nepal",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Sustainable Business Summit",
+    "status": "Active"
+  },
+  {
+    "client": "Himalayan DMC",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "HR Leadership Retreat",
+    "status": "Active"
+  },
+  {
+    "client": "Himalayan Trading Co.",
+    "industry": "Trading & Commerce",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Corporate Diwali Gala",
+    "status": "Active"
+  },
+  {
+    "client": "International Conferences Ltd",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Regional Sales Kickoff",
+    "status": "Active"
+  },
+  {
+    "client": "Kathmandu Meetings Co",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Team Building Adventure",
+    "status": "Past Client"
+  },
+  {
+    "client": "Ncell Pvt. Ltd.",
+    "industry": "Telecommunications",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Annual Leadership Retreat",
+    "status": "Active"
+  },
+  {
+    "client": "Nepal Bankers Association",
+    "industry": "Banking & Finance",
+    "activeRFPs": 1,
+    "totalBookings": 1,
+    "lastEvent": "Tech Innovation Summit",
+    "status": "Active"
+  },
+  {
+    "client": "Nepal Elite DMC",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Digital Transformation Summit",
+    "status": "Past Client"
+  },
+  {
+    "client": "Nepal Events Hub",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "New Year Corporate Gala",
+    "status": "Active"
+  },
+  {
+    "client": "Nepal Tourism Board",
+    "industry": "Tourism & Government",
+    "activeRFPs": 1,
+    "totalBookings": 1,
+    "lastEvent": "Finance Leaders Forum",
+    "status": "Active"
+  },
+  {
+    "client": "NextGen Electronics",
+    "industry": "Technology",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Product Launch 2026",
+    "status": "Active"
+  },
+  {
+    "client": "ProMeet Nepal",
+    "industry": "Events & DMC",
+    "activeRFPs": 0,
+    "totalBookings": 1,
+    "lastEvent": "Customer Success Conference",
+    "status": "Active"
+  },
+  {
+    "client": "Room to Read Nepal",
+    "industry": "Non-Profit / Education",
+    "activeRFPs": 1,
+    "totalBookings": 1,
+    "lastEvent": "Annual Partner Meet",
+    "status": "Active"
+  },
+  {
+    "client": "Summit Holdings Asia",
+    "industry": "Investment & Holdings",
+    "activeRFPs": 1,
+    "totalBookings": 1,
+    "lastEvent": "Asia Sales Conference",
+    "status": "Active"
+  }
+]

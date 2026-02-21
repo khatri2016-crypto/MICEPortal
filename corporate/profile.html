@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile - Corporate Event Planner</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <!-- AG Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <link rel="stylesheet" href="../css/corporate/style.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Navbar (same as other pages, just change active link) -->
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agencies.html">Agencies</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-4">
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                type="button"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  2
+                </span>
+              </button>
+
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 2 unread messages</small>
+                </div>
+
+                <!-- Notification list (using list-group for clean separation) -->
+                <div class="list-group list-group-flush">
+                  <!-- Example item 1 -->
+                  <a
+                  href="events.html?id=evt_1005"
+                  class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                >
+                  <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-primary text-white rounded-circle p-2">
+                        <i class="fa-solid fa-calendar-check fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">
+                        New proposals received for "Employee Appreciation Day"
+                      </p>
+                      <small class="text-muted"
+                        >Global Events DMC • 2 hours ago</small
+                      >
+                    </div>
+                  </div>
+                </a>
+
+                <!-- Example item 2 -->
+                <a
+                  href="events.html?id=evt_1010"
+                  class="list-group-item list-group-item-action px-4 py-3 border-bottom"
+                >
+                  <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="bg-success text-white rounded-circle p-2">
+                        <i class="fa-solid fa-check-circle fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <p class="mb-1 fw-medium">
+                        Booking confirmed for "Nepal Tourism Board Annual Gala"
+                      </p>
+                      <small class="text-muted"
+                        >Elite Events • 3 days ago</small
+                      >
+                    </div>
+                  </div>
+                </a>
+
+                  <!-- More items can be added dynamically -->
+                  <!-- If no notifications: -->
+                  <!-- <div class="text-center py-5 text-muted">No new notifications</div> -->
+                </div>
+
+                <!-- Footer with View All link -->
+                <div class="p-3 border-top bg-light text-center">
+                  <a
+                    href="notifications.html"
+                    class="btn btn-outline-primary btn-sm w-100"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer active"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">CodePal</span>
+              </div>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="profile.html">Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item cursor-pointer" id="btnSettings">
+                    Settings
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li id="logoutBtn">
+                  <a class="dropdown-item text-danger cursor-pointer">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-4 py-5 flex-grow-1">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-11">
+          <!-- Header with Edit / Save / Cancel controls -->
+          <div
+            class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3"
+            id="profileHeader"
+          >
+            <h1 class="h3 fw-semibold mb-0">My Profile</h1>
+            <div id="editControls">
+              <button class="btn btn-secondary px-4" id="btnEditProfile">
+                <i class="fa-solid fa-pen me-2"></i> Edit Profile
+              </button>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <!-- Left Column - Personal Info -->
+            <div class="col-lg-5">
+              <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center p-5" id="personalSection">
+                  <div class="mb-4 position-relative d-inline-block">
+                    <img
+                      src="https://ui-avatars.com/api/?name=CP&background=0D8ABC&color=fff&size=128"
+                      alt="Profile Picture"
+                      class="rounded-circle shadow"
+                      width="128"
+                      height="128"
+                    />
+                    <button
+                      class="btn btn-sm btn-light position-absolute bottom-0 end-0 rounded-circle shadow-sm"
+                      id="changeProfileBtn"
+                    >
+                      <i class="fa-solid fa-camera"></i>
+                    </button>
+                    <!-- Future: camera icon only in edit mode -->
+                  </div>
+
+                  <div class="d-flex flex-column gap-3 text-start mt-4">
+                    <div class="view-mode">
+                      <small class="text-muted">Email</small>
+                      <p class="mb-0 fw-medium" id="displayEmail">
+                        sachin@company.com
+                      </p>
+                    </div>
+                    <div class="edit-mode d-none">
+                      <small class="text-muted">Email</small>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail"
+                        value="sachin@company.com"
+                      />
+                    </div>
+
+                    <div class="view-mode">
+                      <small class="text-muted">Phone</small>
+                      <p class="mb-0 fw-medium" id="displayPhone">
+                        +977 980-1234567
+                      </p>
+                    </div>
+                    <div class="edit-mode d-none">
+                      <small class="text-muted">Phone</small>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="inputPhone"
+                        value="+977 980-1234567"
+                      />
+                    </div>
+
+                    <div class="view-mode">
+                      <small class="text-muted">Joined</small>
+                      <p class="mb-0 fw-medium">November 15, 2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column - Company + Stats -->
+            <div class="col-lg-7">
+              <div class="card shadow-sm border-0 mb-4">
+                <div
+                  class="card-header bg-light d-flex justify-content-between align-items-center"
+                >
+                  <h5 class="mb-0">Company Information</h5>
+                </div>
+                <div class="card-body" id="companySection">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="view-mode">
+                        <label class="form-label text-muted small"
+                          >Company Name</label
+                        >
+                        <p class="fw-medium mb-0" id="displayCompany">
+                          CodePal Pvt. Ltd.
+                        </p>
+                      </div>
+                      <div class="edit-mode d-none">
+                        <label class="form-label text-muted small"
+                          >Company Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputCompany"
+                          value="CodePal Pvt. Ltd."
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="view-mode">
+                        <label class="form-label text-muted small"
+                          >Industry</label
+                        >
+                        <p class="fw-medium mb-0" id="displayIndustry">
+                          Information Technology
+                        </p>
+                      </div>
+                      <div class="edit-mode d-none">
+                        <label class="form-label text-muted small"
+                          >Industry</label
+                        >
+                        <select class="form-select" id="inputIndustry">
+                          <option>Information Technology</option>
+                          <option>Finance</option>
+                          <option>Manufacturing</option>
+                          <option>Consulting</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="view-mode">
+                        <label class="form-label text-muted small"
+                          >Company Size</label
+                        >
+                        <p class="fw-medium mb-0" id="displaySize">
+                          51–200 employees
+                        </p>
+                      </div>
+                      <div class="edit-mode d-none">
+                        <label class="form-label text-muted small"
+                          >Company Size</label
+                        >
+                        <select class="form-select" id="inputSize">
+                          <option>1–10 employees</option>
+                          <option>11–50 employees</option>
+                          <option>51–200 employees</option>
+                          <option>201–500 employees</option>
+                          <option>500+ employees</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="view-mode">
+                        <label class="form-label text-muted small"
+                          >Website</label
+                        >
+                        <p class="fw-medium mb-0">
+                          <a
+                            href="#"
+                            class="text-primary text-decoration-none"
+                            id="displayWebsite"
+                            >www.codepal.ai</a
+                          >
+                        </p>
+                      </div>
+                      <div class="edit-mode d-none">
+                        <label class="form-label text-muted small"
+                          >Website</label
+                        >
+                        <input
+                          type="url"
+                          class="form-control"
+                          id="inputWebsite"
+                          value="https://www.techvision.com.np"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats remain read-only -->
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div
+                    class="card shadow-sm cursor-pointer border-0 text-center p-4 quick-stats-card"
+                    onclick="redirectTo('owner', 'events.html', 'total')"
+                  >
+                    <h3 class="fw-bold text-primary mb-1">18</h3>
+                    <p class="text-muted mb-0">Total Events Created</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="card shadow-sm cursor-pointer border-0 text-center p-4 quick-stats-card"
+                    onclick="redirectTo('owner', 'bookings.html', 'confirmed')"
+                  >
+                    <h3 class="fw-bold text-success mb-1">12</h3>
+                    <p class="text-muted mb-0">Confirmed Bookings</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="card shadow-sm cursor-pointer border-0 text-center p-4 quick-stats-card"
+                    onclick="redirectTo('owner', 'events.html', 'active')"
+                  >
+                    <h3 class="fw-bold text-warning mb-1">4</h3>
+                    <p class="text-muted mb-0">Active Events</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="card shadow-sm border-0 text-center p-4 quick-stats-card"
+                  >
+                    <h3 class="fw-bold text-info mb-1">6</h3>
+                    <p class="text-muted mb-0">Different Agencies Used</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/corporate/profile.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

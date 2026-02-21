@@ -1,0 +1,129 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.app-navbar {
+  position: fixed; /* ← key change: fixed instead of sticky */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px; /* ← explicit height is safer than relying on padding */
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+}
+
+main {
+  margin-top: 64px; /* ← exactly matches navbar height */
+  height: calc(100vh - 64px); /* ← full height minus navbar */
+  overflow-y: auto; /* ← this makes main scrollable */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR BASE */
+.app-navbar {
+  padding-top: 15px;
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: "Inter", sans-serif;
+}
+
+/* Brand */
+.app-navbar .app-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Nav links */
+.nav-link,
+.dropdown-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+  color: #1d4ed8;
+  background-color: rgba(37, 99, 235, 0.08);
+}
+
+.nav-link.active,
+.dropdown-item.active,
+.btn.active {
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.12);
+}
+
+/* Icon button */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+}
+
+.btn-icon:hover {
+  background-color: #f1f5f9;
+  color: #1d4ed8;
+}
+.app-navbar i {
+  font-size: 20px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+}
+
+.dropdown-item {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.modal-title {
+  text-transform: capitalize;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.toast {
+  z-index: 2000 !important;
+}
+button[disabled] {
+  background: #ccc !important;
+  color: #666 !important;
+  border-color: #aaa !important;
+}
+
+
+
+
+/* AG GRID OVERRIDE CSS */
+.ag-cell-value{
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,232 @@
+[
+  {
+    "venueId": 1,
+    "name": "Hyatt Regency Kathmandu",
+    "address": "Taragaon, Boudha, Kathmandu 44600, Nepal",
+    "star": 5,
+    "contactEmail": "reservations@hyattkathmandu.np",
+    "phoneNumbers": [
+      "+977-1-555-1234",
+      "+977-980-123-4567"
+    ],
+    "website": "https://www.hyattkathmandu.com",
+    "shortDescription": "Premium 5-star hotel with expansive ballroom and excellent conference facilities near Boudhanath.",
+    "keyAmenities": [
+      "Grand ballroom (800 pax)",
+      "Outdoor pool",
+      "Spa & gym",
+      "Multiple meeting rooms",
+      "Airport shuttle",
+      "24h room service"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1564507592333-c3d3d6d3e3e3?w=1200&auto=format&fit=crop",
+    "isShortListed": false
+  },
+  {
+    "venueId": 2,
+    "name": "The Dwarika's Hotel",
+    "address": "Battisputali, Kathmandu 44600, Nepal",
+    "star": 5,
+    "contactEmail": "info@dwarikas.hotel.np",
+    "phoneNumbers": [
+      "+977-1-444-5678",
+      "+977-985-987-6543"
+    ],
+    "website": "https://www.dwarikashotel.np",
+    "shortDescription": "Heritage luxury boutique hotel with authentic Newari architecture and cultural ambiance.",
+    "keyAmenities": [
+      "Courtyard events",
+      "Heritage dining",
+      "Spa",
+      "Meeting rooms (150 pax)",
+      "Cultural shows",
+      "Free Wi-Fi"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&auto=format&fit=crop",
+    "isShortListed": true
+  },
+  {
+    "venueId": 3,
+    "name": "Pokhara Grande",
+    "address": "Lakeside, Pokhara 33700, Nepal",
+    "star": 5,
+    "contactEmail": "bookings@pokharagrande.np",
+    "phoneNumbers": [
+      "+977-61-555-7890",
+      "+977-984-111-2222"
+    ],
+    "website": "https://www.pokharagrande.np",
+    "shortDescription": "Modern lakeside resort with stunning Fewa Lake and Annapurna views \u2013 ideal for offsites.",
+    "keyAmenities": [
+      "Infinity pool",
+      "Lakefront lawn",
+      "Ballroom",
+      "Spa & fitness",
+      "Water activities nearby",
+      "Multiple restaurants"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=1200&auto=format&fit=crop",
+    "isShortListed": true
+  },
+  {
+    "venueId": 4,
+    "name": "Hotel Yak & Yeti",
+    "address": "Durbar Marg, Kathmandu 44600, Nepal",
+    "star": 5,
+    "contactEmail": "reservations@yaknyeti.np",
+    "phoneNumbers": [
+      "+977-1-422-3344",
+      "+977-980-334-5566"
+    ],
+    "website": "https://www.yaknyeti.np",
+    "shortDescription": "Iconic central Kathmandu hotel with large banquet halls and strong reputation for corporate events.",
+    "keyAmenities": [
+      "Large ballrooms (1000 pax)",
+      "Casino",
+      "Garden venue",
+      "Fitness center",
+      "Central location",
+      "24-hour service"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&auto=format&fit=crop",
+    "isShortListed": true
+  },
+  {
+    "venueId": 5,
+    "name": "Gokarna Forest Resort",
+    "address": "Gokarna, Kathmandu 44600, Nepal",
+    "star": 5,
+    "contactEmail": "info@gokarnaresort.np",
+    "phoneNumbers": [
+      "+977-1-445-7788",
+      "+977-985-555-6677"
+    ],
+    "website": "https://www.gokarnaresort.np",
+    "shortDescription": "Peaceful forest retreat with golf course, perfect for executive retreats and team bonding.",
+    "keyAmenities": [
+      "Golf course",
+      "Forest trails",
+      "Outdoor pool",
+      "Meeting venues",
+      "Spa",
+      "Nature activities"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&auto=format&fit=crop",
+    "isShortListed": false
+  },
+  {
+    "venueId": 6,
+    "name": "Soaltee Kathmandu",
+    "address": "Tahachal, Kathmandu 44600, Nepal",
+    "star": 4,
+    "contactEmail": "reservations@soaltee.np",
+    "phoneNumbers": [
+      "+977-1-427-3999",
+      "+977-984-222-3333"
+    ],
+    "website": "https://www.soalteehotel.np",
+    "shortDescription": "Well-established 4-star hotel with good conference facilities and convenient location.",
+    "keyAmenities": [
+      "Ballroom (500 pax)",
+      "Outdoor lawn",
+      "Casino",
+      "Fitness center",
+      "Multiple restaurants",
+      "Free parking"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1564507592333-c3d3d6d3e3e3?w=1200&auto=format&fit=crop",
+    "isShortListed": false
+  },
+  {
+    "venueId": 7,
+    "name": "Hotel Annapurna",
+    "address": "Durbar Marg, Kathmandu 44600, Nepal",
+    "star": 4,
+    "contactEmail": "info@hotelannapurna.np",
+    "phoneNumbers": [
+      "+977-1-422-1711",
+      "+977-980-999-8888"
+    ],
+    "website": "https://www.hotelannapurna.np",
+    "shortDescription": "Classic central hotel with banquet halls and easy access to business districts.",
+    "keyAmenities": [
+      "Banquet halls (600 pax)",
+      "Rooftop venue",
+      "Gym",
+      "Central location",
+      "24h coffee shop",
+      "Free Wi-Fi"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=1200&auto=format&fit=crop",
+    "isShortListed": false
+  },
+  {
+    "venueId": 8,
+    "name": "Temple Tree Resort & Spa",
+    "address": "Lekhnath, Pokhara 33700, Nepal",
+    "star": 4,
+    "contactEmail": "stay@templetree.np",
+    "phoneNumbers": [
+      "+977-61-123-4567",
+      "+977-984-777-8899"
+    ],
+    "website": "https://www.templetree.np",
+    "shortDescription": "Tranquil Pokhara resort with spa and outdoor spaces \u2013 great for wellness retreats.",
+    "keyAmenities": [
+      "Spa & wellness center",
+      "Outdoor pool",
+      "Event lawn",
+      "Yoga pavilion",
+      "Lake views",
+      "Organic dining"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&auto=format&fit=crop",
+    "isShortListed": true
+  },
+  {
+    "venueId": 9,
+    "name": "Aloft Kathmandu Thamel",
+    "address": "Thamel, Kathmandu 44600, Nepal",
+    "star": 4,
+    "contactEmail": "aloftkathmandu@aloft.np",
+    "phoneNumbers": [
+      "+977-1-441-2345",
+      "+977-985-666-7788"
+    ],
+    "website": "https://www.aloftkathmandu.np",
+    "shortDescription": "Modern, vibrant hotel in Thamel with flexible meeting spaces for younger corporate groups.",
+    "keyAmenities": [
+      "Re:Mix lounge",
+      "Meeting rooms (100 pax)",
+      "Rooftop bar",
+      "Gym",
+      "Free Wi-Fi",
+      "Central Thamel location"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&auto=format&fit=crop",
+    "isShortListed": false
+  },
+  {
+    "venueId": 10,
+    "name": "Hotel Barahi",
+    "address": "Lakeside, Pokhara 33700, Nepal",
+    "star": 3,
+    "contactEmail": "info@hotelbarahi.np",
+    "phoneNumbers": [
+      "+977-61-523-456",
+      "+977-984-333-4455"
+    ],
+    "website": "https://www.hotelbarahi.np",
+    "shortDescription": "Comfortable 3-star lakeside hotel offering good value for mid-range team offsites.",
+    "keyAmenities": [
+      "Rooftop restaurant",
+      "Small meeting hall (80 pax)",
+      "Lake views",
+      "Free parking",
+      "Basic gym",
+      "24h front desk"
+    ],
+    "sampleImage": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=1200&auto=format&fit=crop",
+    "isShortListed": false
+  }
+]

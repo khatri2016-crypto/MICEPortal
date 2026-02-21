@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - MICE Agent</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/mice/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg app-navbar">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="dashboard.html"
+        >
+          <img
+            src="../assets/image-removebg-preview.png"
+            alt="Logo"
+            height="28"
+          />
+          <span class="app-name">MICE Platform</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rfps.html">RFPs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proposals.html">Proposals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clients.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+          </ul>
+
+          <!-- Right actions -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Notifications -->
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-icon position-relative"
+                id="notificationsDropdown"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-bell"></i>
+                <span
+                  class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                >
+                  3
+                </span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0"
+                aria-labelledby="notificationsDropdown"
+                style="width: 360px; max-height: 480px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div class="px-4 py-3 bg-light border-bottom">
+                  <h6 class="mb-0 fw-semibold">Notifications</h6>
+                  <small class="text-muted">You have 2 unread messages</small>
+                </div>
+
+                <!-- Notification list (using list-group for clean separation) -->
+                <div class="list-group list-group-flush">
+                  <!-- Example item 1 -->
+                  <a
+                    href="events.html?id=evt_1005"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom unread"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary text-white rounded-circle p-2">
+                          <i class="fa-solid fa-calendar-check fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          New proposals received for "Employee Appreciation Day"
+                        </p>
+                        <small class="text-muted"
+                          >Global Events DMC • 2 hours ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- Example item 2 -->
+                  <a
+                    href="events.html?id=evt_1010"
+                    class="list-group-item list-group-item-action px-4 py-3 border-bottom"
+                  >
+                    <div class="d-flex align-items-start">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="bg-success text-white rounded-circle p-2">
+                          <i class="fa-solid fa-check-circle fa-lg"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <p class="mb-1 fw-medium">
+                          Booking confirmed for "Nepal Tourism Board Annual
+                          Gala"
+                        </p>
+                        <small class="text-muted"
+                          >Elite Events • 3 days ago</small
+                        >
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- More items can be added dynamically -->
+                  <!-- If no notifications: -->
+                  <!-- <div class="text-center py-5 text-muted">No new notifications</div> -->
+                </div>
+
+                <!-- Footer with View All link -->
+                <div class="p-3 border-top bg-light text-center">
+                  <a
+                    href="notifications.html"
+                    class="btn btn-outline-primary btn-sm w-100"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- User dropdown -->
+            <div class="dropdown">
+              <div
+                class="nav-link d-flex align-items-center gap-2 cursor-pointer"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="d-none d-md-block">Sachin</span>
+              </div>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../login.html"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid px-4 py-4">
+      <!-- KPI Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">Active RFPs</p>
+              <h2 class="mb-0">18</h2>
+              <small class="text-success"
+                ><i class="fas fa-arrow-up me-1"></i>4 new this week</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <p class="text-muted small mb-1">New Proposals</p>
+              <h2 class="mb-0">7</h2>
+              <small class="text-warning"
+                ><i class="fas fa-clock me-1"></i>Awaiting review</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <h6 class="text-muted mb-1">Pending Actions</h6>
+              <h2 class="mb-0">11</h2>
+              <small class="text-danger"
+                ><i class="fas fa-exclamation-triangle me-1"></i>3 urgent</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+              <h6 class="text-muted mb-1">Confirmed Bookings (Feb)</h6>
+              <h2 class="mb-0">6</h2>
+              <small class="text-muted">+22% vs last month</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="d-flex flex-wrap gap-3 mb-4">
+        <a
+          href="create-rfp.html"
+          class="btn btn-primary btn-lg btn-create-rfp shadow-sm"
+        >
+          <i class="fas fa-plus me-2"></i>Create New RFP
+        </a>
+        <a href="#" class="btn btn-outline-primary btn-lg">
+          <i class="fas fa-balance-scale me-2"></i>Compare Proposals
+        </a>
+        <a href="#" class="btn btn-outline-secondary btn-lg">
+          <i class="fas fa-envelope me-2"></i>Open Inbox
+        </a>
+      </div>
+
+      <div class="row">
+        <!-- Main Column -->
+        <div class="col-lg-8">
+          <!-- Active RFPs Table -->
+          <div class="card mb-4">
+            <div
+              class="card-header bg-white d-flex justify-content-between align-items-center"
+            >
+              <h5 class="mb-0">Active RFPs</h5>
+              <a href="rfps.html" class="btn btn-sm btn-outline-primary"
+                >View All RFPs</a
+              >
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Event Name</th>
+                    <th>Client</th>
+                    <th>Deadline</th>
+                    <th>Hotels Invited</th>
+                    <th>Proposals</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TechCorp Annual Summit 2026</td>
+                    <td>TechCorp Ltd</td>
+                    <td><span class="badge badge-urgent">2 days left</span></td>
+                    <td>14</td>
+                    <td>9 / 14</td>
+                    <td><span class="badge bg-warning">Negotiating</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-secondary">
+                        Open
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Global Finance Retreat</td>
+                    <td>FinBank Nepal</td>
+                    <td><span class="badge bg-secondary">8 days</span></td>
+                    <td>11</td>
+                    <td>4 / 11</td>
+                    <td><span class="badge bg-info">Proposals In</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-secondary">
+                        Open
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Product Launch Kathmandu</td>
+                    <td>InnoTech Pvt</td>
+                    <td><span class="badge bg-success">Closed</span></td>
+                    <td>8</td>
+                    <td>8 / 8</td>
+                    <td>
+                      <span class="badge bg-primary">Ready to Recommend</span>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-secondary">
+                        Open
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Add 2–3 more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Upcoming Confirmed Events -->
+          <div class="card">
+            <div
+              class="card-header bg-white d-flex justify-content-between align-items-center"
+            >
+              <h5 class="mb-0">Upcoming Confirmed Events</h5>
+              <a href="#" class="btn btn-sm btn-outline-primary"
+                >View Calendar</a
+              >
+            </div>
+            <ul class="list-group list-group-flush">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center py-3"
+              >
+                <div>
+                  <strong>Corporate Offsite</strong><br />
+                  <small class="text-muted"
+                    >FinBank Nepal • March 15–17, 2026 • Pokhara</small
+                  >
+                </div>
+                <span class="badge bg-success">Confirmed</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center py-3"
+              >
+                <div>
+                  <strong>Leadership Conference</strong><br />
+                  <small class="text-muted"
+                    >TechCorp Ltd • April 2–4, 2026 • Chitwan</small
+                  >
+                </div>
+                <span class="badge bg-success">Confirmed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="col-lg-4">
+          <!-- Notifications / Inbox Preview -->
+          <div class="sidebar-widget shadow-sm">
+            <h5 class="mb-3">Recent Activity</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="d-flex">
+                  <i class="fas fa-file-upload text-primary me-3 mt-1"></i>
+                  <div>
+                    <strong>New proposal received</strong> from Hyatt Place
+                    Kathmandu<br />
+                    <small class="text-muted">2 hours ago</small>
+                  </div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex">
+                  <i class="fas fa-comment-dots text-warning me-3 mt-1"></i>
+                  <div>
+                    <strong>Hotel replied</strong> – Negotiation message from
+                    Marriott<br />
+                    <small class="text-muted">Yesterday</small>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="text-primary text-decoration-none"
+                  >View all notifications →</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Stats / Pipeline -->
+          <div class="sidebar-widget shadow-sm">
+            <h5 class="mb-3">Pipeline Overview</h5>
+            <div class="progress mb-2" style="height: 20px">
+              <div class="progress-bar bg-primary" style="width: 65%">
+                RFPs Sent
+              </div>
+            </div>
+            <div class="progress mb-2" style="height: 20px">
+              <div class="progress-bar bg-info" style="width: 40%">
+                Proposals Received
+              </div>
+            </div>
+            <div class="progress mb-2" style="height: 20px">
+              <div class="progress-bar bg-success" style="width: 22%">
+                Bookings Confirmed
+              </div>
+            </div>
+            <small class="text-muted">Last 30 days</small>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

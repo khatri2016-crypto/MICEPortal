@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile - Venue</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../lib/all.min.css" />
+    <script src="../lib/all.min.js"></script>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="../lib/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-lg-flex flex-column">
+          <div class="sidebar-header">
+            <span class="sidebar-brand">
+              <img src="../assets/image-removebg-preview.png" alt="Logo" />
+            </span>
+          </div>
+
+          <ul class="nav nav-pills flex-column gap-1 sidebar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="event-spaces.html">
+                <i class="fa-solid fa-kaaba"></i>
+                Event Spaces
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="inquiries.html">
+                <i class="fa-brands fa-rocketchat"></i>
+                Received RFPs
+                <span class="badge text-bg-danger">2</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">
+                <i class="fa-regular fa-images"></i>
+                Gallery
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="documents.html">
+                <i class="fa-regular fa-folder"></i>
+                Documents
+              </a>
+            </li>
+          </ul>
+
+          <div class="sidebar-footer d-flex flex-column gap-1 mt-auto">
+            <span class="nav-item">
+              <a class="nav-link active" href="profile.html">
+                <i class="fa-regular fa-circle-user"></i>
+                Profile
+              </a>
+            </span>
+
+            <span class="nav-item">
+              <a class="nav-link cursor-pointer" id="btnSettings">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+            </span>
+            <span class="nav-item" id="logoutBtn">
+              <a class="nav-link text-danger cursor-pointer">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+              </a>
+            </span>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-grow-1 p-4 overflow-auto">
+          <div class="card">
+            <!-- Header with avatar and basic info -->
+            <div
+              class="profile-header text-center position-relative bg-primary"
+            >
+              <i class="profile-avatar fa-solid fa-archway"></i>
+              <h3 class="mb-1" id="hotelNameDisplay">
+                Grand Horizon Hotel & Conference Center
+              </h3>
+              <p class="mb-2 fs-5">5-Star • Kathmandu, Nepal</p>
+              <button
+                class="btn btn-light btn-sm mt-2"
+                id="changeProfileBtn"
+              >
+                Change Profile Picture
+              </button>
+            </div>
+
+            <div class="card-body p-4 p-md-5">
+              <div class="row g-5">
+                <!-- Left Column: Basic Information & Contact -->
+                <div class="col-lg-5">
+                  <h5 class="mb-4 border-bottom pb-3">Basic Information</h5>
+
+                  <div class="mb-4">
+                    <div class="info-label">
+                      Hotel Name
+                      <small>
+                        <span
+                          class="edit-link ms-2"
+                          onclick="editProfile('name')"
+                          >Edit</span
+                        >
+                      </small>
+                    </div>
+                    <p class="mb-1 fw-medium" id="hotelNameDisplay2">
+                      Grand Horizon Hotel & Conference Center
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="info-label">
+                      Address<small
+                        ><span
+                          class="edit-link ms-2"
+                          onclick="editProfile('address')"
+                          >Edit</span
+                        ></small
+                      >
+                    </div>
+                    <p class="mb-1 fw-medium" id="addressDisplay">
+                      Thamel Marg, Kathmandu 44600, Nepal
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="info-label">
+                      Contact Email
+                      <small
+                        ><span
+                          class="edit-link ms-2"
+                          onclick="editProfile('email')"
+                          >Edit</span
+                        ></small
+                      >
+                    </div>
+                    <p class="mb-1 fw-medium" id="emailDisplay">
+                      info@grandhorizon.com.np
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="info-label">
+                      Phone Numbers
+                      <small
+                        ><span
+                          class="edit-link ms-2"
+                          onclick="editProfile('phone')"
+                          >Manage</span
+                        ></small
+                      >
+                    </div>
+                    <p class="mb-1 fw-medium" id="phonesDisplay">
+                      +977 1-4221234 (Main)<br />+977 980-1234567 (Reservations)
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="info-label">
+                      Website
+                      <small
+                        ><span
+                          class="edit-link ms-2"
+                          onclick="editProfile('website')"
+                          >Edit</span
+                        ></small
+                      >
+                    </div>
+                    <p class="mb-1 fw-medium">
+                      <a
+                        href="https://grandhorizon.com.np"
+                        target="_blank"
+                        class="text-primary"
+                        id="websiteDisplay"
+                        >grandhorizon.com.np</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Right Column: Amenities & Description -->
+                <div class="col-lg-7">
+                  <h5 class="mb-4 border-bottom pb-3">
+                    Property Description & Amenities
+                  </h5>
+
+                  <div class="mb-4">
+                    <div class="info-label">
+                      Short Description<small
+                        ><span
+                          class="edit-link ms-2"
+                          onclick="editProfile('description')"
+                          >Edit</span
+                        ></small
+                      >
+                    </div>
+                    <p class="mb-2 fw-medium" id="descriptionDisplay">
+                      Luxury 5-star hotel in the heart of Thamel with 180 rooms,
+                      8 meeting rooms, rooftop pool, spa, and multiple dining
+                      options. Ideal for corporate events, conferences, and MICE
+                      activities.
+                    </p>
+                  </div>
+
+                  <div class="mb-5">
+                    <div class="info-label">Key Amenities</div>
+                    <div
+                      class="d-flex flex-wrap gap-2 mt-3"
+                      id="amenitiesContainer"
+                    >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Free WiFi
+                      </span>
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Secure Parking</span
+                      >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Rooftop Pool</span
+                      >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Spa & Gym</span
+                      >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >24/7 Room Service</span
+                      >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Airport Shuttle</span
+                      >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Conference Facilities</span
+                      >
+                      <span class="bg-primary-subtle amenity-badge"
+                        >Multi-Cuisine Restaurant</span
+                      >
+                    </div>
+                    <small class="d-block mt-3">
+                      <span
+                        class="edit-link ms-2"
+                        onclick="editProfile('amenities')"
+                        >Manage Amenities</span
+                      >
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="informativeModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="confirmationModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+              id="cancelBtn"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-danger btn-sm"
+              id="deleteBtn"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="actionModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="loadingScreen"
+      class="position-fixed top-0 start-0 w-100 h-100 align-items-center bg-dark bg-opacity-50"
+      style="display: none; z-index: 9999"
+    >
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border text-success"></div>
+      </div>
+    </div>
+
+    <div
+      class="toast align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 10px; right: 10px"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <script src="../js/profile..js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/utility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
